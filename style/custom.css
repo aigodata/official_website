@@ -105,6 +105,18 @@ h1, h2, h3, h4, h5, h6 {
     transform: translate(-50%, -50%);
 }
 
+/*按钮*/
+.btn {
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    font-size: 14px;
+    color: #fff;
+    background: #50aff2;
+    border-radius: 22px;
+    padding: 0 22px;
+}
+
 /*头部*/
 .rx-header {
     height: 58px;
@@ -157,19 +169,8 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 20px;
 }
 
-.rx-banner .content .btn {
+.rx-banner .content div {
     padding-top: 32px;
-}
-
-.rx-banner .content .btn a {
-    display: inline-block;
-    height: 38px;
-    line-height: 38px;
-    font-size: 14px;
-    color: #fff;
-    background: #50aff2;
-    border-radius: 22px;
-    padding: 0 22px;
 }
 
 /*主体部分*/
@@ -227,7 +228,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 52px;
 }
 
-.rx-we-do ul li i, .rx-about-us ul li  i{
+.rx-we-do ul li i, .rx-about-us ul li i {
     font-size: 36px;
 }
 
@@ -279,8 +280,40 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*关于我们*/
-.rx-about-us ul li {
-    float: left;
+.rx-about-us p.brief-introduction {
+    font-size: 18px;
+    color: #666;
+    line-height: 32px;
+    text-align: left;
+    padding: 40px 10% 10px;
+}
+
+.rx-about-us ul li i {
+    height: 56px;
+}
+
+.rx-about-us ul li:first-child i {
+    font-size: 56px;
+}
+
+.rx-about-us ul li:nth-child(2) i {
+    padding-top: 12px;
+}
+
+.rx-about-us ul li:last-child i {
+    font-size: 52px;
+    padding-top: 5px;
+}
+
+/*加入我们*/
+.rx-join-us p {
+    font-size: 18px;
+    color: #666;
+    padding: 40px 0 30px;
+}
+
+.rx-join-us div{
+    padding-bottom: 40px;
 }
 
 /*页脚*/
