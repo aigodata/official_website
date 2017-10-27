@@ -145,6 +145,10 @@ h1, h2, h3, h4, h5, h6 {
     color: #333;
 }
 
+.rx-header .rx-nav ul li a:hover,.rx-header .rx-nav ul li a.active{
+    color: #50aff2;
+}
+
 .rx-header .rx-nav ul li:not(:last-child) a {
     margin-right: 52px;
 }
