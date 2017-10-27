@@ -1,7 +1,7 @@
 /*
     *自定义样式
 */
-html, body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td,i {
+html, body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td, i {
     margin: 0;
     padding: 0;
     -moz-box-sizing: border-box; /* Firefox */
@@ -178,7 +178,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
 }
 
-.rx-grid{
+.rx-grid {
     padding: 60px 0;
 }
 
@@ -209,96 +209,110 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 5px;
 }
 
-.rx-grid-each{
+.rx-grid-each {
     text-align: center;
     padding: 60px 0;
 }
 
-.rx-grid-each h2{
+.rx-grid-each h2 {
     font-size: 26px;
     color: #000;
     margin-bottom: 10px;
 }
 
-/*我们可以做*/
-.rx-we-do ul li{
+/*我们可以做&关于我们*/
+.rx-we-do ul li, .rx-about-us ul li {
     float: left;
     width: 33.333%;
     margin-top: 52px;
 }
 
-.rx-we-do ul li i{
+.rx-we-do ul li i, .rx-about-us ul li  i{
     font-size: 36px;
 }
 
-.rx-we-do ul li p{
+.rx-we-do ul li p, .rx-about-us ul li p {
     font-size: 18px;
     color: #585858;
     margin-top: 10px;
 }
 
 /*我们服务于*/
-.rx-we-serve ul{
+.rx-we-serve ul {
     margin-top: 42px;
 }
-.rx-we-serve ul li{
+
+.rx-we-serve ul li {
     float: left;
     width: 25%;
     padding: 0 8px;
     margin-top: 16px;
 }
-.rx-we-serve ul li a{
-    display: block;
+
+.rx-we-serve ul li div {
     border: 1px solid #ededed;
     border-radius: 5px;
     padding: 15px 0;
 }
 
 /*客户评价*/
-.rx-customer-evaluation ul{
+.rx-customer-evaluation ul {
     max-width: 680px;
     margin: 0 auto;
 }
-.rx-customer-evaluation ul li{
+
+.rx-customer-evaluation ul li {
     margin-top: 50px;
 }
-.rx-customer-evaluation ul li p{
+
+.rx-customer-evaluation ul li p {
     text-align: left;
     font-size: 14px;
     line-height: 24px;
 }
-.rx-customer-evaluation ul li span{
+
+.rx-customer-evaluation ul li span {
     display: block;
     text-align: right;
     color: #666;
     padding-top: 20px;
 }
+
+/*关于我们*/
+.rx-about-us ul li {
+    float: left;
+}
+
 /*页脚*/
-.rx-footer .content{
+.rx-footer .content {
     padding: 30px 0 50px;
 }
-.rx-footer .each-column{
+
+.rx-footer .each-column {
     float: left;
     width: 25%;
     text-align: center;
 }
-.rx-footer .each-column dl{
+
+.rx-footer .each-column dl {
     display: inline-block;
     text-align: left;
     padding-top: 30px;
 }
 
-.rx-footer .each-column dl dt,.rx-footer .each-column dl dd{
+.rx-footer .each-column dl dt, .rx-footer .each-column dl dd {
     line-height: 24px;
 }
-.rx-footer .each-column dl dt{
+
+.rx-footer .each-column dl dt {
     color: #000;
 }
-.rx-footer .each-column dl dd a{
+
+.rx-footer .each-column dl dd a {
     color: #888;
 }
 
-.rx-footer .copyright{
+.rx-footer .copyright {
     height: 36px;
     line-height: 36px;
     text-align: center;
