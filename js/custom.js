@@ -17,7 +17,8 @@ $(function () {
             var thisImgTop = $(this).offset().top;
             if (displayArea + scrollHeight >= thisImgTop) {
                 $(this).addClass('animated swing');
-            };
+            }
         });
     });
+
 });
