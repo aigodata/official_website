@@ -1,7 +1,7 @@
 /*
     *自定义样式
 */
-html, body, h1, h2, h3, h4, h5, h6, hr,div, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td, i {
+html, body, h1, h2, h3, h4, h5, h6, hr, div, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td, i {
     margin: 0;
     padding: 0;
     -moz-box-sizing: border-box; /* Firefox */
@@ -106,14 +106,49 @@ h1, h2, h3, h4, h5, h6 {
 
 /*按钮*/
 .btn {
+    position: relative;
     display: inline-block;
     height: 38px;
     line-height: 38px;
     font-size: 14px;
     color: #fff;
-    background: #50aff2;
-    border-radius: 22px;
+    background: transparent;
+    border-radius: 19px;
     padding: 0 22px;
+}
+
+.btn:before,.btn:after {
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    border-radius: 19px;
+}
+
+.btn:before{
+    background: #50aff2;
+    z-index: -2;
+}
+
+.btn:after{
+    background: transparent;
+    z-index: -1;
+    -o-transition: all .3s;
+    -ms-transition: all .3s;
+    -moz-transition: all .3s;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    -webkit-transform: scale(.5,1);
+    transform: scale(.5,1);
+    opacity: ;
+}
+
+.btn:hover:after{
+    background: #55b9ff;
+    -webkit-transform: scale(1,1);
+    transform: scale(1,1);
 }
 
 /*头部*/
@@ -367,76 +402,91 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-
 /*屏幕小于1000*/
 @media screen and (max-width: 1000px) {
     /*我们可以做&关于我们&我们服务于&页脚*/
-    .rx-grid ul li,.rx-we-do ul li, .rx-about-us ul li, .rx-we-serve ul li ,.rx-footer .each-column{
+    .rx-grid ul li, .rx-we-do ul li, .rx-about-us ul li, .rx-we-serve ul li, .rx-footer .each-column {
         width: 50%;
     }
+
     .rx-grid ul li:not(:nth-child(-n+2)) {
         margin-top: 52px;
     }
 }
 
 /*屏幕小于768*/
-@media screen and (max-width:768px){
-    body{
+@media screen and (max-width: 768px) {
+    body {
         min-width: 320px;
     }
+
     /*按钮*/
-    .btn{
+    .btn {
         height: 30px;
         line-height: 30px;
         font-size: 12px;
         padding: 0 18px;
+        border-radius: 15px;
     }
+
     /*头部*/
-    .rx-header{
+    .rx-header {
         height: 42px;
         padding: 0 10px;
     }
+
     /*logo*/
-    .rx-header .rx-logo{
+    .rx-header .rx-logo {
         padding: 8px 0 2px;
     }
-    .rx-header .rx-logo img{
+
+    .rx-header .rx-logo img {
         width: 98px;
     }
+
     /*导航*/
-    .rx-header .rx-nav ul li a{
+    .rx-header .rx-nav ul li a {
         font-size: 12px;
         line-height: 42px;
     }
-    .rx-header .rx-nav ul li:not(:last-child) a{
+
+    .rx-header .rx-nav ul li:not(:last-child) a {
         margin-right: 12px;
     }
+
     /*banner*/
-    .rx-banner .content h2{
+    .rx-banner .content h2 {
         font-size: 26px;
     }
-    .rx-banner .content p{
+
+    .rx-banner .content p {
         font-size: 18px;
     }
+
     /*每个条目标题*/
-    .rx-grid-each h2{
+    .rx-grid-each h2 {
         font-size: 22px;
     }
+
     /*我们可以做&关于我们&我们服务于&页脚*/
-    .rx-grid ul li,.rx-we-do ul li, .rx-about-us ul li, .rx-we-serve ul li ,.rx-footer .each-column{
+    .rx-grid ul li, .rx-we-do ul li, .rx-about-us ul li, .rx-we-serve ul li, .rx-footer .each-column {
         width: 100%;
     }
-    .rx-grid ul li{
+
+    .rx-grid ul li {
         margin-top: 52px;
     }
-    .rx-footer .each-column .wechat{
+
+    .rx-footer .each-column .wechat {
         padding-top: 52px;
     }
-    .rx-about-us p.brief-introduction{
+
+    .rx-about-us p.brief-introduction {
         font-size: 16px;
     }
+
     /*客户评价*/
-    .rx-customer-evaluation ul{
+    .rx-customer-evaluation ul {
         padding: 0 20px;
     }
 }
