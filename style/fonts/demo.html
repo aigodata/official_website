@@ -3,183 +3,123 @@
     <meta charset="utf-8"/>
     <title>webfont</title>
     <style type="text/css">
-        * {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
+    *{margin: 0;padding: 0;list-style: none;}
+/*
+KISSY CSS Reset
+理念：1. reset 的目的不是清除浏览器的默认样式，这仅是部分工作。清除和重置是紧密不可分的。
+2. reset 的目的不是让默认样式在所有浏览器下一致，而是减少默认样式有可能带来的问题。
+3. reset 期望提供一套普适通用的基础样式。但没有银弹，推荐根据具体需求，裁剪和修改后再使用。
+特色：1. 适应中文；2. 基于最新主流浏览器。
+维护：玉伯<lifesinger@gmail.com>, 正淳<ragecarrier@gmail.com>
+ */
 
-        /*
-        KISSY CSS Reset
-        理念：1. reset 的目的不是清除浏览器的默认样式，这仅是部分工作。清除和重置是紧密不可分的。
-        2. reset 的目的不是让默认样式在所有浏览器下一致，而是减少默认样式有可能带来的问题。
-        3. reset 期望提供一套普适通用的基础样式。但没有银弹，推荐根据具体需求，裁剪和修改后再使用。
-        特色：1. 适应中文；2. 基于最新主流浏览器。
-        维护：玉伯<lifesinger@gmail.com>, 正淳<ragecarrier@gmail.com>
-         */
+/** 清除内外边距 **/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+th, td /* table elements 表格元素 */ {
+  margin: 0;
+  padding: 0;
+}
 
-        /** 清除内外边距 **/
-        body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
-        dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
-        pre, /* text formatting elements 文本格式元素 */
-        form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
-        th, td /* table elements 表格元素 */
-        {
-            margin: 0;
-            padding: 0;
-        }
+/** 设置默认字体 **/
+body,
+button, input, select, textarea /* for ie */ {
+  font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }
+address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
+code, kbd, pre, samp { font-family: courier new, courier, monospace; } /* 统一等宽字体 */
+small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
 
-        /** 设置默认字体 **/
-        body,
-        button, input, select, textarea /* for ie */
-        {
-            font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif;
-        }
+/** 重置列表元素 **/
+ul, ol { list-style: none; }
 
-        h1, h2, h3, h4, h5, h6 {
-            font-size: 100%;
-        }
+/** 重置文本格式元素 **/
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
 
-        address, cite, dfn, em, var {
-            font-style: normal;
-        }
 
-        /* 将斜体扶正 */
-        code, kbd, pre, samp {
-            font-family: courier new, courier, monospace;
-        }
+/** 重置表单元素 **/
+legend { color: #000; } /* for ie6 */
+fieldset, img { border: 0; } /* img 搭车：让链接里的 img 无边框 */
+button, input, select, textarea { font-size: 100%; } /* 使得表单元素在 ie 下能继承字体大小 */
+/* 注：optgroup 无法扶正 */
 
-        /* 统一等宽字体 */
-        small {
-            font-size: 12px;
-        }
+/** 重置表格元素 **/
+table { border-collapse: collapse; border-spacing: 0; }
 
-        /* 小于 12px 的中文很难阅读，让 small 正常化 */
+/* 清除浮动 */
+.ks-clear:after, .clear:after {
+  content: '\20';
+  display: block;
+  height: 0;
+  clear: both;
+}
+.ks-clear, .clear {
+  *zoom: 1;
+}
 
-        /** 重置列表元素 **/
-        ul, ol {
-            list-style: none;
-        }
+.main {padding: 30px 100px;}
+.main h1{font-size:36px; color:#333; text-align:left;margin-bottom:30px; border-bottom: 1px solid #eee;}
 
-        /** 重置文本格式元素 **/
-        a {
-            text-decoration: none;
-        }
+.helps{margin-top:40px;}
+.helps pre{
+  padding:20px;
+  margin:10px 0;
+  border:solid 1px #e7e1cd;
+  background-color: #fffdef;
+  overflow: auto;
+}
 
-        a:hover {
-            text-decoration: underline;
-        }
+.icon_lists li{
+  float:left;
+  width: 100px;
+  height:150px;
+  text-align: center;
+}
+.icon_lists .icon{
+  font-size: 42px;
+  line-height: 100px;
+  margin: 10px 0;
+  color:#333;
+  -webkit-transition: font-size 0.25s ease-out 0s;
+  -moz-transition: font-size 0.25s ease-out 0s;
+  transition: font-size 0.25s ease-out 0s;
 
-        /** 重置表单元素 **/
-        legend {
-            color: #000;
-        }
+}
+.icon_lists .icon:hover{
+  font-size: 100px;
+}
 
-        /* for ie6 */
-        fieldset, img {
-            border: 0;
-        }
+@font-face {font-family: "webfont";
+  src: url('webfont.eot'); /* IE9*/
+  src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('webfont.woff') format('woff'), /* chrome、firefox */
+  url('webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+}
 
-        /* img 搭车：让链接里的 img 无边框 */
-        button, input, select, textarea {
-            font-size: 100%;
-        }
-
-        /* 使得表单元素在 ie 下能继承字体大小 */
-        /* 注：optgroup 无法扶正 */
-
-        /** 重置表格元素 **/
-        table {
-            border-collapse: collapse;
-            border-spacing: 0;
-        }
-
-        /* 清除浮动 */
-        .ks-clear:after, .clear:after {
-            content: '\20';
-            display: block;
-            height: 0;
-            clear: both;
-        }
-
-        .ks-clear, .clear {
-            *zoom: 1;
-        }
-
-        .main {
-            padding: 30px 100px;
-        }
-
-        .main h1 {
-            font-size: 36px;
-            color: #333;
-            text-align: left;
-            margin-bottom: 30px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .helps {
-            margin-top: 40px;
-        }
-
-        .helps pre {
-            padding: 20px;
-            margin: 10px 0;
-            border: solid 1px #e7e1cd;
-            background-color: #fffdef;
-            overflow: auto;
-        }
-
-        .icon_lists li {
-            float: left;
-            width: 100px;
-            height: 150px;
-            text-align: center;
-        }
-
-        .icon_lists .icon {
-            font-size: 42px;
-            line-height: 100px;
-            margin: 10px 0;
-            color: #333;
-            -webkit-transition: font-size 0.25s ease-out 0s;
-            -moz-transition: font-size 0.25s ease-out 0s;
-            transition: font-size 0.25s ease-out 0s;
-
-        }
-
-        .icon_lists .icon:hover {
-            font-size: 100px;
-        }
-
-        @font-face {
-            font-family: "webfont";
-            src: url('webfont.eot'); /* IE9*/
-            src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('webfont.woff') format('woff'), /* chrome、firefox */ url('webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('webfont.svg#webfont') format('svg'); /* iOS 4.1- */
-        }
-
-        .web-font {
-            font-family: "webfont" !important;
-            font-size: 16px;
-            font-style: normal;
-            -webkit-font-smoothing: antialiased;
-            -webkit-text-stroke-width: 0.2px;
-            -moz-osx-font-smoothing: grayscale;
-        }
+.web-font {
+  font-family:"webfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
     </style>
 </head>
 <body>
-<div class="main">
-    <h1>webfont 字体预览</h1>
-    <p class="web-font">
-        可视化展示产品展示关于我们擅长可视化的数据分析公司简单专业值得信任可视化展示aigodata可视化展示产品展示关于我们公司简介团队介绍加入我们联系我们商务合作：13581857664（田明）地址：Copyright
-        2016-2017 AIGODATA 京ICP备17001622号-1产品更新中...敬请期待诚信是我们最珍贵也最珍视的品质我们坚持学习
-        把客户当朋友UI提供设计方案让产品焕然一新UE从交互体验上让产品更贴心可视化组件优秀的可视化组件提高产品竞争力分析工具降低运营成本提升企业竞争力大屏展示项目外包可视化集成3D建模界面设计图表定制用户画像日志分析性能监控</p>
+    <div class="main">
+        <h1>webfont 字体预览</h1>
+        <p class="web-font">擅长可视化的数据分析公司简单   专业   值得信任可视化展示UI提供设计方案让产品焕然一新UE从交互体验上让产品更贴心可视化组件优秀的可视化组件提高产品竞争力分析工具降低运营成本提升企业竞争力我们可以做大屏展示项目外包可视化集成3D建模界面设计图表定制用户画像日志分析性能监控我们服务于客户评价“是一家专业从事技术开发，技术服务，软件设计，开发与销售；计算机网络工程，软件设计，开发与销售；计算机网络工程，”--XXX公司 CEO“是一家专业从事技术开发，技术服务，软件设计，开发与销售；计算机网络工程，软件设计，开发与销售；计算机网络工程，”--XXX公司 CEO“是一家专业从事技术开发，技术服务，软件设计，开发与销售；计算机网络工程，软件设计，开发与销售；计算机网络工程，”--XXX公司 CEOaigodata可视化展示产品展示关于我们可视化展示产品展示关于我们公司简介团队介绍加入我们联系我们商务合作：13581857664（田明）地址：Copyright 2016-2017 AIGODATA 京ICP备17001622号-1产品更新中...敬请期待诚信是我们最珍贵也最珍视的品质我们坚持学习   把客户当朋友关于我们埃果科技（aigodata），是一家擅长可视化的数据分析公司，为客户提供从数据采集、分析到可视化展示的完整解决方案。核心成员来自360、高德、启明星辰等知名企业，我们是一支经验丰富、专业、高效的团队。自由、平等、开放也是我们孜孜不倦的追求。诚信品质服务加入我们期待不浮躁、能独立思考、除了钱还想追求点什么的你加入，扫码细聊。</p>
 
 
-    <div class="helps">
-        第一步：使用font-face声明字体
-        <pre>
+        <div class="helps">
+            第一步：使用font-face声明字体
+            <pre>
 @font-face {font-family: 'webfont';
     src: url('webfont.eot'); /* IE9*/
     src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -188,8 +128,8 @@
     url('webfont.svg#webfont') format('svg'); /* iOS 4.1- */
 }
 </pre>
-        第二步：定义使用webfont的样式
-        <pre>
+第二步：定义使用webfont的样式
+            <pre>
 .web-font{
     font-family:"webfont" !important;
     font-size:16px;font-style:normal;
@@ -197,12 +137,12 @@
     -webkit-text-stroke-width: 0.2px;
     -moz-osx-font-smoothing: grayscale;}
 </pre>
-        第三步：为文字加上对应的样式
-        <pre>
-&lt;i class="web-font"&gt;可视化展示产品展示关于我们擅长可视化的数据分析公司简单专业值得信任可视化展示aigodata可视化展示产品展示关于我们公司简介团队介绍加入我们联系我们商务合作：13581857664（田明）地址：Copyright 2016-2017 AIGODATA 京ICP备17001622号-1产品更新中...敬请期待诚信是我们最珍贵也最珍视的品质我们坚持学习   把客户当朋友UI提供设计方案让产品焕然一新UE从交互体验上让产品更贴心可视化组件优秀的可视化组件提高产品竞争力分析工具降低运营成本提升企业竞争力大屏展示项目外包可视化集成3D建模界面设计图表定制用户画像日志分析性能监控&lt;/i&gt;
+第三步：为文字加上对应的样式
+<pre>
+&lt;i class="web-font"&gt;擅长可视化的数据分析公司简单   专业   值得信任可视化展示UI提供设计方案让产品焕然一新UE从交互体验上让产品更贴心可视化组件优秀的可视化组件提高产品竞争力分析工具降低运营成本提升企业竞争力我们可以做大屏展示项目外包可视化集成3D建模界面设计图表定制用户画像日志分析性能监控我们服务于客户评价“是一家专业从事技术开发，技术服务，软件设计，开发与销售；计算机网络工程，软件设计，开发与销售；计算机网络工程，”--XXX公司 CEO“是一家专业从事技术开发，技术服务，软件设计，开发与销售；计算机网络工程，软件设计，开发与销售；计算机网络工程，”--XXX公司 CEO“是一家专业从事技术开发，技术服务，软件设计，开发与销售；计算机网络工程，软件设计，开发与销售；计算机网络工程，”--XXX公司 CEOaigodata可视化展示产品展示关于我们可视化展示产品展示关于我们公司简介团队介绍加入我们联系我们商务合作：13581857664（田明）地址：Copyright 2016-2017 AIGODATA 京ICP备17001622号-1产品更新中...敬请期待诚信是我们最珍贵也最珍视的品质我们坚持学习   把客户当朋友关于我们埃果科技（aigodata），是一家擅长可视化的数据分析公司，为客户提供从数据采集、分析到可视化展示的完整解决方案。核心成员来自360、高德、启明星辰等知名企业，我们是一支经验丰富、专业、高效的团队。自由、平等、开放也是我们孜孜不倦的追求。诚信品质服务加入我们期待不浮躁、能独立思考、除了钱还想追求点什么的你加入，扫码细聊。&lt;/i&gt;
 </pre>
-    </div>
+        </div>
 
-</div>
+    </div>
 </body>
 </html>
