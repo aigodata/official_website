@@ -11,7 +11,7 @@ $(function () {
 		$(this).addClass('active').parent().siblings().children().removeClass('active');
 	});
 
-	/*复制代码*/
+	//复制代码
 	var clipboard = new Clipboard('.rx-page-component a.copy');
 
 	//显示隐藏代码块
@@ -28,6 +28,14 @@ $(function () {
 			$(this).text('隐藏代码');
 		}
 
+	});
+
+	//隐藏代码块
+	var aBtn = $('.code-block a.up');
+
+	aBtn.click(function () {
+		$(this).parent().slideUp(550);
+		$(this).parent().next().text('显示代码');
 	});
 
 });
