@@ -14,12 +14,20 @@ $(function () {
 	/*复制代码*/
 	var clipboard = new Clipboard('.rx-page-component a.copy');
 
-	clipboard.on('success', function (e) {
-		console.log(e)
-	});
+	//显示隐藏代码块
+	var toggleBtn = $('.rx-demo-layout .example-wrap a.toggle-btn'); //获取显示隐藏的按钮
 
-	clipboard.on('error', function (e) {
-		console.log(e);
+	toggleBtn.click(function () {
+
+		if ($(this).prev().is(':visible')) {
+			$(this).prev().slideUp(550);
+			$(this).text('显示代码');
+
+		} else {
+			$(this).prev().slideDown(550);
+			$(this).text('隐藏代码');
+		}
+
 	});
 
 });

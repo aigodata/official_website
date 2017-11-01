@@ -501,6 +501,10 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 5px;
 }
 
+.rx-demo-layout .example-wrap .code-block{
+  display: none;
+}
+
 .rx-demo-layout .example-wrap .layout {
   padding: 10px;
 }
