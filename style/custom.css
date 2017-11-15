@@ -184,7 +184,9 @@ h1, h2, h3, h4, h5, h6 {
   color: #333;
 }
 
-.rx-header .rx-nav ul li:hover a, .rx-header .rx-nav ul li a.active {
+.rx-header .rx-nav ul li:hover a,
+.rx-header .rx-nav ul li a.active,
+.rx-header .rx-nav .rx-subnav a.active {
   color: #50aff2;
 }
 
@@ -214,6 +216,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .rx-header .rx-nav ul li:hover .rx-subnav ul li a {
   color: #333;
+}
+
+.rx-header .rx-nav ul li:hover .rx-subnav ul li a.active {
+  color: #50aff2;
 }
 
 .rx-header .rx-nav ul li:hover .rx-subnav ul li a:hover {

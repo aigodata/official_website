@@ -1,0 +1,37 @@
+/* 方便书写的基础样式 */
+
+.ag-fl {
+  float: left;
+}
+
+.ag-fr {
+  float: right;
+}
+
+.ag-clearfix:after {
+  clear: both;
+}
+
+.ag-hide {
+  display: none;
+}
+
+.ag-relative {
+  position: relative;
+}
+
+.ag-absolute {
+  position: absolute;
+}
+
+.ag-text-center {
+  text-align: center;
+}
+
+.ag-text-left {
+  text-align: left;
+}
+
+.ag-text-right {
+  text-align: right;
+}
