@@ -15,7 +15,7 @@ html, body, .rx-wrap {
 }
 
 body {
-  font-family: "Microsoft Yahei", "微软雅黑", Tahoma, Arial, Helvetica;
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
   font-size: 12px;
   font-weight: 300;
   color: #333;
@@ -33,7 +33,6 @@ a:focus {
 }
 
 input, button, select {
-  font-family: "Microsoft Yahei", "微软雅黑", Tahoma, Arial, Helvetica;
   outline: none;
 }
 
@@ -183,6 +182,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 58px;
   font-size: 14px;
   color: #333;
+  font-weight: 400;
 }
 
 .rx-header .rx-nav ul li:hover a,
@@ -195,36 +195,26 @@ h1, h2, h3, h4, h5, h6 {
 .rx-header .rx-nav .rx-subnav {
   position: absolute;
   top: 57px;
-  left: -15px;
   right: -15px;
   border-radius: 5px;
   border: 1px solid #efefef;
   box-shadow: 0 4px 8px #f2f2f2;
   z-index: 999;
   display: none;
+  width: 310px;
 }
 
 .rx-header .rx-nav .rx-subnav ul li {
   float: none;
-  height: 34px;
   margin: 0;
 }
 
 .rx-header .rx-nav .rx-subnav ul li a {
   line-height: 34px;
-  text-align: center;
 }
 
 .rx-header .rx-nav ul li:hover .rx-subnav ul li a {
   color: #333;
-}
-
-.rx-header .rx-nav ul li:hover .rx-subnav ul li a.active {
-  color: #50aff2;
-}
-
-.rx-header .rx-nav ul li:hover .rx-subnav ul li a:hover {
-  color: #50aff2;
 }
 
 .rx-header .rx-nav ul li:hover .rx-subnav {
@@ -746,7 +736,11 @@ h1, h2, h3, h4, h5, h6 {
   background: #000;
 }
 
-/*产品展示 页脚特殊处理*/
+.rx-footer .copyright a {
+  color: #fff;
+}
+
+  /*产品展示 页脚特殊处理*/
 .rx-footer.special-handling {
   margin-top: 296px;
 }
@@ -865,4 +859,77 @@ h1, h2, h3, h4, h5, h6 {
     width: 92%;
     margin: 20px auto 0;
   }
+}
+
+
+/* 修改菜单样式 */
+
+.rx-header .rx-nav .rx-subnav {
+  width: 210px;
+  padding: 5px 0 0;
+}
+
+.nav-a {
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}
+
+.nav-item-li {
+  box-sizing: border-box;
+  border-left: 2px solid #fff;
+  margin-bottom: 10px;
+}
+
+.nav-item-li:hover {
+  border-left: 2px solid #30a8ff;
+  background-color: #fafafa;
+}
+
+.nav-item {
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  box-sizing: border-box;
+  padding: 5px 10px 5px 20px;
+  text-align: left;
+}
+
+.rx-header .rx-nav ul li:hover a.nav-item {
+  color: #333;
+}
+
+.nav-item-title {
+  font-size: 15px;
+  position: relative;
+}
+
+.nav-item-title .arrow {
+  position: absolute;
+  right: 15px;
+  top: 8px;
+  border: 5px solid #fff;
+  border-left-color: #333;
+  width: 0;
+  height: 0;
+}
+
+.nav-item-description {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+
+.rx-header .nav-item-li  .rx-subnav {
+  display: none !important;
+  top: -5px;
+  right: -100%;
+}
+
+.rx-header .nav-item-li:hover  .rx-subnav {
+  display: block !important;
+}
+
+.rx-header .rx-nav .rx-subnav ul li {
+  margin: 0 0 5px 0;
+}
+
+.rx-header .rx-nav .rx-subnav ul li a {
+  line-height: 24px;
 }
