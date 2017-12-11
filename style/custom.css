@@ -745,30 +745,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 296px;
 }
 
-/*
-    *屏幕自适应
-*/
-
-/*屏幕小于1140*/
-@media screen and (max-width: 1140px) {
-  /*主体部分*/
-  .rx-main {
-    width: 100%;
-  }
-}
-
-/*屏幕小于1000*/
-@media screen and (max-width: 1000px) {
-  /*我们可以做&关于我们&我们服务于&页脚*/
-  .rx-grid ul li, .rx-we-do ul li, .rx-about-us ul li, .rx-we-serve ul li, .rx-footer .each-column {
-    width: 50%;
-  }
-
-  .rx-grid ul li:not(:nth-child(-n+2)) {
-    margin-top: 52px;
-  }
-}
-
 /*屏幕小于768*/
 @media screen and (max-width: 768px) {
   body {
