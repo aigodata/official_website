@@ -909,3 +909,17 @@ h1, h2, h3, h4, h5, h6 {
 .rx-header .rx-nav .rx-subnav ul li a {
   line-height: 24px;
 }
+
+/* 服务于 */
+.service-ul {
+  padding: 0 1%;
+  box-sizing: border-box;
+}
+
+.service-ul li {
+  padding: 0 15px;
+}
+
+.service-ul li div {
+  padding: 20px 0;
+}
