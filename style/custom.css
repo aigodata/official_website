@@ -248,7 +248,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /*主体部分*/
 .rx-main {
-  width: 1140px;
+  width: 100%;
   margin: 0 auto;
 }
 
