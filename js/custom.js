@@ -16,7 +16,7 @@ $(function () {
 	});
 
 	// 移动端 头部菜单点击
-	var mobileBtn = $('.rx-header .rx-nav ul li a');
+	var mobileBtn = $('.rx-header .rx-nav ul li.drop-down a');
 	// 移动端 头部菜单点击函数
 	function navClick() {
 		if ($(this).next().css("display") == "none") {
@@ -43,7 +43,7 @@ $(function () {
 			$('.rx-header .rx-nav').css('display', 'block');
 			$('.rx-mask').css('display', 'none');
 			$('.rx-header .inner .rx-toggle').css('display', 'none');
-			mobileBtn.off('click');
+			mobileBtn.off('click').next().removeAttr("style");
 		} else {
 			$('#header').addClass('rx-header-bg');
 			$('.rx-header .rx-nav').css('display', 'none');
