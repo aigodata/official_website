@@ -15,23 +15,40 @@ $(function () {
 		}
 	});
 
-	// 页面小于1000
+	// 移动端 头部菜单点击
+	var mobileBtn = $('.rx-header .rx-nav ul li a');
+	// 移动端 头部菜单点击函数
+	function navClick() {
+		if ($(this).next().css("display") == "none") {
+			$(this).next().slideDown("500");
+		} else {
+			$(this).next().slideUp("500");
+			$(this).next().find('.subnav').slideUp(500);
+		}
+	};
+
+	// 页面小于992
 	var ka_Width = $(window).width();
-	if (ka_Width <= 1000) {
+	if (ka_Width <= 992) {
 		$('#header').addClass('rx-header-bg');
+		$('.rx-header .inner .rx-toggle').css('display', 'block');
+		mobileBtn.click(navClick); //此处待修改
 	};
 
 	// 自适应宽度
 	$(window).resize(function () {
 		var ka_Width = $(window).width();
-		if (ka_Width >= 1000) {
+		if (ka_Width >= 992) {
 			$('#header').removeClass('rx-header-bg');
 			$('.rx-header .rx-nav').css('display', 'block');
-			$('.rx-nav-inner .rx-menu').removeClass('rx-respon-menu');
 			$('.rx-mask').css('display', 'none');
+			$('.rx-header .inner .rx-toggle').css('display', 'none');
+			mobileBtn.unbind(); //此处待修改
 		} else {
 			$('#header').addClass('rx-header-bg');
 			$('.rx-header .rx-nav').css('display', 'none');
+			$('.rx-header .inner .rx-toggle').css('display', 'block');
+			mobileBtn.click(navClick); //此处待修改
 		};
 	});
 
@@ -45,6 +62,7 @@ $(function () {
 		} else {
 			Mask.fadeOut();
 			$(this).next().slideUp("slow");
+			$(this).next().find('.rx-subnav').css('display', 'none');
 		}
 	});
 
@@ -56,39 +74,5 @@ $(function () {
 		navBtn.next().removeClass('rx-respon-menu');
 		navBtn.next().slideUp("slow");
 	});
-
-	// //可视化展示侧边栏
-	// var visualBtn = $('.rx-visual .rx-sidebar ul li a');
-	//
-	// visualBtn.click(function () {
-	// 	$(this).addClass('active').parent().siblings().children().removeClass('active');
-	// });
-
-	// //复制代码
-	// var clipboard = new Clipboard('.rx-page-component a.copy');
-	//
-	// //显示隐藏代码块
-	// var toggleBtn = $('.rx-demo-layout .example-wrap a.toggle-btn'); //获取显示隐藏的按钮
-	//
-	// toggleBtn.click(function () {
-	//
-	// 	if ($(this).prev().is(':visible')) {
-	// 		$(this).prev().slideUp(550);
-	// 		$(this).text('显示代码');
-	//
-	// 	} else {
-	// 		$(this).prev().slideDown(550);
-	// 		$(this).text('隐藏代码');
-	// 	}
-	//
-	// });
-	//
-	// //隐藏代码块
-	// var aBtn = $('.code-block a.up');
-	//
-	// aBtn.click(function () {
-	// 	$(this).parent().slideUp(550);
-	// 	$(this).parent().next().text('显示代码');
-	// });
 
 });

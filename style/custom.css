@@ -60,21 +60,9 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
 }
 
-/*font-face声明字体*/
-@font-face {
-  font-family: 'webfont';
-  src: url('/style/fonts/webfont.eot'); /* IE9*/
-  src: url('/style/fonts/webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('/style/fonts/webfont.woff') format('woff'), /* chrome、firefox */ url('/style/fonts/webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('/style/fonts/webfont.svg#webfont') format('svg'); /* iOS 4.1- */
-}
-
 /*webfont样式*/
 .web-font {
-  font-family: "webfont" !important;
   font-size: 12px;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-stroke-width: 0.2px;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 /*浮动&清除浮动*/
@@ -171,8 +159,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .rx-header .inner {
   position: relative;
-  width: 1200px;
-  margin: 0 auto;
+  padding: 0 30px 0 20px;
 }
 
 .rx-header .inner .rx-toggle {
@@ -249,7 +236,13 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 10px 35px rgba(0, 0, 0, .2);
   z-index: 999;
   display: none;
-  width: 310px;
+  width: 248px;
+  padding: 5px 0 0;
+}
+
+.rx-header .rx-nav .rx-subnav.subnav {
+  width: 220px;
+  right: -220px;
 }
 
 .rx-header .rx-nav .rx-subnav ul li {
@@ -279,14 +272,15 @@ h1, h2, h3, h4, h5, h6 {
 /*banner*/
 .rx-banner {
   height: 720px;
-  background: url(../images/banner.png) no-repeat right bottom;
-  background-size: 78%;
+  background: url(../images/banner.jpg) no-repeat right bottom;
+  background-size: contain;
   padding-top: 58px;
 }
 
 .rx-banner .content {
   width: 100%;
   color: #3a3a3a;
+  padding-left: 30px;
 }
 
 .rx-banner .content h2 {
@@ -444,7 +438,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .rx-we-serve ul li {
-  position: relative;
   float: left;
   width: 25%;
   padding: 0 8px;
@@ -452,8 +445,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .rx-we-serve ul li div {
-  height: 278px;
+  position: relative;
+  width: 240px;
+  height: 240px;
   box-shadow: 0 4px 38px rgba(231, 231, 231, .75);
+  margin: 0 auto;
 }
 
 /*客户评价*/
@@ -545,7 +541,8 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 32px;
 }
 
-.rx-visual .rx-sidebar ul li a:hover, .rx-visual .rx-sidebar ul li a.active {
+.rx-visual .rx-sidebar ul li a:hover,
+.rx-visual .rx-sidebar ul li a.active {
   color: #50aff2;
 }
 
@@ -593,140 +590,12 @@ h1, h2, h3, h4, h5, h6 {
   color: #50aff2;
 }
 
-/*代码块*/
-/*.rx-page-component a.copy, .rx-page-component a.up {
-  position: absolute;
-  color: #888;
-}
-
-.rx-page-component a.copy {
-  top: 10px;
-  right: 10px;
-}
-
-.rx-page-component a.up {
-  top: 8px;
-  right: 38px;
-  font-size: 18px;
-}
-
-.rx-page-component code {
-  display: block;
-  color: #333;
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0 20px;
-}*/
-
-/*布局示例*/
-/*.rx-demo-layout p.explain {
-  height: 40px;
-  line-height: 40px;
-  border-radius: 5px;
-  background: #fafafa;
-  padding-left: 15px;
-  margin: 18px 0;
-}
-
-.rx-demo-layout .example-wrap {
-  border: 1px solid #e7e7e7;
-  border-radius: 5px;
-}
-
-.rx-demo-layout .example-wrap .code-block {
-  display: none;
-}
-
-.rx-demo-layout .example-wrap .layout {
-  padding: 10px;
-}
-
-.rx-demo-layout .example-wrap a.toggle-btn {
-  display: block;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  font-size: 14px;
-  color: #666;
-  border-top: 1px solid #e7e7e7;
-}*/
-
-/*布局*/
-/*.row {
-  padding: 10px;
-}
-
-.row .col {
-  float: left;
-}
-
-.row .col-1-1 {
-  width: 100%;
-}
-
-.row .col-1-2 {
-  width: 50%;
-}
-
-.row .col-1-3 {
-  width: 33.333%;
-}
-
-.row .col-2-3 {
-  width: 66.666%;
-}
-
-.row .col-1-4 {
-  width: 25%;
-}
-
-.row .col-3-4 {
-  width: 75%;
-}
-
-.row .col-1-5 {
-  width: 20%;
-}
-
-.row .col-2-5 {
-  width: 40%;
-}
-
-.row .col-3-5 {
-  width: 60%;
-}
-
-.row .col-4-5 {
-  width: 80%;
-}
-
-.row .inner {
-  height: 36px;
-  border-radius: 5px;
-}
-
-.row .inner-height {
-  height: 180px;
-}
-
-.row .inner-height-200 {
-  height: 200px;
-}
-
-.row .inner-height-88 {
-  height: 88px;
-}*/
-
-/*上边框*/
-/*.rx-border-top {
-  border-top: 1px solid #e7e7e7;
-}*/
-
 /*页脚*/
 .rx-footer {
   min-width: 1200px;
   background: #20242d;
   margin-top: 20px;
+  overflow: hidden;
 }
 
 .rx-footer .content {
@@ -752,7 +621,8 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 30px;
 }
 
-.rx-footer .each-column dl dt, .rx-footer .each-column dl dd {
+.rx-footer .each-column dl dt,
+.rx-footer .each-column dl dd {
   line-height: 24px;
 }
 
@@ -760,11 +630,14 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
-.rx-footer .each-column dl dd, .rx-footer .each-column dl dd a, .friendly-link ul li a {
+.rx-footer .each-column dl dd,
+.rx-footer .each-column dl dd a,
+.friendly-link ul li a {
   color: #a4aaaf;
 }
 
-.rx-footer .each-column dl dd a:hover, .friendly-link ul li a:hover {
+.rx-footer .each-column dl dd a:hover,
+.friendly-link ul li a:hover {
   color: #16acfa;
 }
 
@@ -804,7 +677,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .rx-footer .copyright .right a:not(:first-child) {
-  padding-left: 6px;
+  padding-left: 8px;
 }
 
 .rx-footer .copyright a {
@@ -817,8 +690,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .rx-footer .copyright a .code {
   position: absolute;
-  bottom: 22px;
-  left: -59px;
+  bottom: 26px;
+  left: -58px;
   text-align: center;
   background: #fff;
   border-radius: 5px;
@@ -855,107 +728,18 @@ h1, h2, h3, h4, h5, h6 {
   height: 90px;
 }
 
-.rx-footer .copyright .right a:hover .code {
-  display: block;
+.rx-footer .copyright .right a i {
+  display: inline-block;
+  font-size: 20px;
 }
 
-/* 产品展示 页脚特殊处理 */
-/*.rx-footer.special-handling {
-  margin-top: 296px;
-}*/
+.rx-footer .copyright .right a:first-child i {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
 
-/* 屏幕小于768 */
-/*@media screen and (max-width: 768px) {
-  body {
-    min-width: 320px;
-  }
-
-  !* 按钮 *!
-  .btn {
-    height: 30px;
-    line-height: 30px;
-    font-size: 12px;
-    padding: 0 18px;
-    border-radius: 15px;
-  }
-
-  !* 头部 *!
-  .rx-header {
-    height: 42px;
-    padding: 0 10px;
-  }
-
-  !*logo*!
-  .rx-header .rx-logo {
-    padding: 8px 0 2px;
-  }
-
-  .rx-header .rx-logo img {
-    width: 98px;
-  }
-
-  !*导航*!
-  .rx-header .rx-nav ul li a {
-    font-size: 12px;
-    line-height: 42px;
-  }
-
-  .rx-header .rx-nav ul li:not(:last-child) a {
-    margin-right: 12px;
-  }
-
-  .rx-header .rx-nav .rx-subnav {
-    top: 41px;
-  }
-
-  !*banner*!
-  .rx-banner .content h2 {
-    font-size: 26px;
-  }
-
-  .rx-banner .content p {
-    font-size: 18px;
-  }
-
-  !*每个条目标题*!
-  .rx-grid-each h2 {
-    font-size: 22px;
-  }
-
-  !*我们可以做&关于我们&我们服务于&页脚*!
-  .rx-grid ul li, .rx-we-do ul li, .rx-about-us ul li, .rx-we-serve ul li{
-    width: 100%;
-  }
-
-  .rx-grid ul li {
-    margin-top: 52px;
-  }
-
-  .rx-about-us p.brief-introduction {
-    font-size: 16px;
-  }
-
-  !*客户评价*!
-  .rx-customer-evaluation ul {
-    padding: 0 20px;
-  }
-
-  !*可视化展示页面*!
-  .rx-page-component {
-    padding-left: 50px;
-  }
-
-  .rx-visual .rx-sidebar {
-    position: static;
-    width: 92%;
-    margin: 20px auto 0;
-  }
-}*/
-
-/* 修改菜单样式 */
-.rx-header .rx-nav .rx-subnav {
-  width: 210px;
-  padding: 5px 0 0;
+.rx-footer .copyright .right a:hover .code {
+  display: block;
 }
 
 .nav-a {
@@ -964,12 +748,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-item-li {
   box-sizing: border-box;
-  border-left: 2px solid #fff;
+  border-left: 3px solid #fff;
   margin-bottom: 10px;
 }
 
 .nav-item-li:hover {
-  border-left: 2px solid #30a8ff;
+  border-left: 3px solid #30a8ff;
   background-color: #fafafa;
 }
 
@@ -1005,13 +789,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .rx-header .nav-item-li .rx-subnav {
-  display: none !important;
+  display: none;
   top: -5px;
   right: -100%;
 }
 
 .rx-header .nav-item-li:hover .rx-subnav {
-  display: block !important;
+  display: block;
+}
+
+.rx-header .rx-nav ul li:hover .subnav {
+  display: none;
+}
+
+.rx-header .rx-nav ul li .nav-item-li:hover .subnav {
+  display: block;
 }
 
 .rx-header .rx-nav .rx-subnav ul li {
@@ -1045,141 +837,4 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   background: rgba(0, 0, 0, .15);
   display: none;
-}
-
-/* 屏幕小于1200 */
-@media screen and (max-width: 1200px) {
-
-  /* 头部 & 内容区域 & 页脚 & 友情链接 & 版权 */
-  .rx-header .inner,
-  .rx-content,
-  .rx-footer .content,
-  .rx-footer .bottom {
-    width: auto;
-  }
-
-  /* 头部 & banner */
-  .rx-header .inner,
-  .rx-banner .content {
-    padding: 0 20px;
-  }
-
-  /* 说明部分  每个内部条目 */
-  .each-wrap > div {
-    float: none;
-  }
-
-  .rx-explain .each-wrap .margin-special {
-    margin-top: 80px;
-    margin-bottom: 20px;
-  }
-
-  .rx-explain .each-wrap .margin-l {
-    margin-top: 20px;
-  }
-
-  .rx-explain .each-wrap .margin-r {
-    margin-top: 80px;
-  }
-
-  /* 我们服务于 */
-  .rx-we-serve ul li div {
-    height: 220px;
-  }
-
-  /* 页脚 */
-  .rx-footer {
-    min-width: initial;
-  }
-}
-
-/* 屏幕小于1000 */
-@media screen and (max-width: 1000px) {
-
-  /* 头部 */
-  .rx-header .inner .rx-toggle {
-    display: block;
-  }
-
-  .rx-nav {
-    float: none;
-    position: absolute;
-    top: 58px;
-    left: 0;
-    right: 0;
-    background: #fff;
-  }
-
-  .rx-header .rx-nav ul li {
-    float: none;
-    padding-left: 20px;
-  }
-
-  .rx-header .rx-nav ul li a i.arrow-bottom {
-    right: 20px;
-  }
-
-  .rx-header .rx-nav ul li:not(:last-child) {
-    margin-right: 0;
-  }
-
-  /* 头部导航 */
-  .rx-header .rx-nav {
-    display: none;
-  }
-
-  /* 子导航 */
-  .rx-header .rx-nav .rx-subnav {
-    position: static;
-    width: 100% !important;
-    border-radius: 0;
-    box-shadow: none;
-    display: none;
-  }
-
-  .rx-header .rx-nav .rx-subnav ul li {
-    padding-left: 0 !important;
-  }
-
-  .rx-header .rx-nav ul li:hover .rx-subnav {
-    /*display: none;*/
-  }
-
-  .nav-item-title .arrow {
-    top: 24px;
-    border-left-color: #fff;
-    border-top-color: #000;
-  }
-
-  .rx-subnav ul li .rx-subnav {
-    padding: 0;
-  }
-
-  .rx-subnav ul li .rx-subnav .nav-item-li,
-  .rx-subnav ul li .rx-subnav .nav-item-li:hover {
-    border-left: 0;
-  }
-
-  /* 我们的优势 */
-  .rx-we-superiority ul li {
-    width: 50%;
-    height: 250px;
-  }
-
-  /* 我们服务于 */
-  .rx-we-serve ul li {
-    width: 50%;
-  }
-
-  /* 页脚 */
-  .rx-footer .each-column {
-    width: 33.333%;
-    height: 188px;
-    text-align: center;
-    padding-left: 0 !important;
-  }
-
-  .rx-footer .each-column:last-child {
-    width: 66.666% !important;
-  }
 }
