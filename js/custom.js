@@ -32,7 +32,7 @@ $(function () {
 	if (ka_Width <= 992) {
 		$('#header').addClass('rx-header-bg');
 		$('.rx-header .inner .rx-toggle').css('display', 'block');
-		mobileBtn.click(navClick); //此处待修改
+		mobileBtn.off('click').on('click',navClick);
 	};
 
 	// 自适应宽度
@@ -43,12 +43,12 @@ $(function () {
 			$('.rx-header .rx-nav').css('display', 'block');
 			$('.rx-mask').css('display', 'none');
 			$('.rx-header .inner .rx-toggle').css('display', 'none');
-			mobileBtn.unbind(); //此处待修改
+			mobileBtn.off('click');
 		} else {
 			$('#header').addClass('rx-header-bg');
 			$('.rx-header .rx-nav').css('display', 'none');
 			$('.rx-header .inner .rx-toggle').css('display', 'block');
-			mobileBtn.click(navClick); //此处待修改
+			mobileBtn.off('click').on('click',navClick);
 		};
 	});
 
