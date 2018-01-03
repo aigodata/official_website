@@ -442,16 +442,19 @@ h1, h2, h3, h4, h5, h6 {
 .rx-explain .each-wrap h6.visual {
   background: url(../images/visual-tit-bg.png) no-repeat;
   background-size: contain;
+  margin-top: 120px;
 }
 
 .rx-explain .each-wrap h6.bi {
   background: url(../images/bi-tit-bg.png) no-repeat;
   background-size: contain;
+  margin-top: 90px;
 }
 
 .rx-explain .each-wrap h6.report {
   background: url(../images/report-tit-bg.png) no-repeat;
   background-size: contain;
+  margin-top: -20px;
 }
 
 .rx-explain .each-wrap h6.software {
