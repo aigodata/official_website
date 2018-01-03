@@ -15,6 +15,21 @@ $(function () {
 		}
 	});
 
+	// 头部导航切换按钮
+	var navBtn = $('.rx-toggle');
+	var Mask = $('.rx-mask');
+	navBtn.click(function () {
+		if ($(this).next().css("display") == "none") {
+			Mask.fadeIn();
+			$(this).parents('#header').addClass('rx-header-bg');
+			$(this).next().slideDown("slow");
+		} else {
+			Mask.fadeOut();
+			$(this).parents('#header').removeClass('rx-header-bg');
+			$(this).next().slideUp("slow");
+		}
+	});
+
 	// //可视化展示侧边栏
 	// var visualBtn = $('.rx-visual .rx-sidebar ul li a');
 	//

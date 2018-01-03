@@ -164,14 +164,31 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 999;
 }
 
-.rx-header-scroll{
+.rx-header-scroll, .rx-header-bg {
   background: #fff;
-  box-shadow: 0 0 4px rgba(0,0,0,.2);
+  box-shadow: 0 0 4px rgba(0, 0, 0, .2);
 }
 
 .rx-header .inner {
+  position: relative;
   width: 1200px;
   margin: 0 auto;
+}
+
+.rx-header .inner .rx-toggle {
+  position: absolute;
+  top: 14.5px;
+  right: 20px;
+  border: 1px solid #dcdcdc;
+  border-radius: 2px;
+  padding: 2px 8px;
+  cursor: pointer;
+  display: none;
+}
+
+.rx-header .inner .rx-toggle i {
+  font-size: 20px;
+  color: #585858;
 }
 
 /*logo*/
@@ -780,13 +797,13 @@ h1, h2, h3, h4, h5, h6 {
   padding-left: 20px;
 }
 
-.rx-footer .copyright .right{
+.rx-footer .copyright .right {
   position: absolute;
   top: 0;
   right: 20px;
 }
 
-.rx-footer .copyright .right a:not(:first-child){
+.rx-footer .copyright .right a:not(:first-child) {
   padding-left: 6px;
 }
 
@@ -798,7 +815,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
-.rx-footer .copyright a .code{
+.rx-footer .copyright a .code {
   position: absolute;
   bottom: 22px;
   left: -59px;
@@ -810,7 +827,7 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 
-.rx-footer .copyright a .code:after{
+.rx-footer .copyright a .code:after {
   content: '';
   position: absolute;
   bottom: -10px;
@@ -822,23 +839,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .rx-footer .copyright a .code h6,
-.rx-footer .copyright a:hover .code h6{
+.rx-footer .copyright a:hover .code h6 {
   color: #585858;
   line-height: initial;
 }
 
 .rx-footer .copyright a .code p,
-.rx-footer .copyright a:hover .code p{
+.rx-footer .copyright a:hover .code p {
   color: #888;
   line-height: 22px;
   padding-bottom: 10px;
 }
 
-.rx-footer .copyright a .wechat{
+.rx-footer .copyright a .wechat {
   height: 90px;
 }
 
-.rx-footer .copyright .right a:hover .code{
+.rx-footer .copyright .right a:hover .code {
   display: block;
 }
 
@@ -1017,4 +1034,152 @@ h1, h2, h3, h4, h5, h6 {
 
 .service-ul li div {
   padding: 20px 0;
+}
+
+/* 蒙层 */
+.rx-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .15);
+  display: none;
+}
+
+/* 屏幕小于1200 */
+@media screen and (max-width: 1200px) {
+
+  /* 头部 & 内容区域 & 页脚 & 友情链接 & 版权 */
+  .rx-header .inner,
+  .rx-content,
+  .rx-footer .content,
+  .rx-footer .bottom {
+    width: auto;
+  }
+
+  /* 头部 & banner */
+  .rx-header .inner,
+  .rx-banner .content {
+    padding: 0 20px;
+  }
+
+  /* 说明部分  每个内部条目 */
+  .each-wrap > div {
+    float: none;
+  }
+
+  .rx-explain .each-wrap .margin-special {
+    margin-top: 80px;
+    margin-bottom: 20px;
+  }
+
+  .rx-explain .each-wrap .margin-l {
+    margin-top: 20px;
+  }
+
+  .rx-explain .each-wrap .margin-r {
+    margin-top: 80px;
+  }
+
+  /* 我们服务于 */
+  .rx-we-serve ul li div {
+    height: 220px;
+  }
+
+  /* 页脚 */
+  .rx-footer {
+    min-width: initial;
+  }
+}
+
+/* 屏幕小于1000 */
+@media screen and (max-width: 1000px) {
+
+  /* 头部 */
+  .rx-header .inner .rx-toggle {
+    display: block;
+  }
+
+  .rx-nav {
+    float: none;
+    position: absolute;
+    top: 58px;
+    left: 0;
+    right: 0;
+    background: #fff;
+  }
+
+  .rx-header .rx-nav ul li {
+    float: none;
+    padding-left: 20px;
+  }
+
+  .rx-header .rx-nav ul li a i.arrow-bottom {
+    right: 20px;
+  }
+
+  .rx-header .rx-nav ul li:not(:last-child) {
+    margin-right: 0;
+  }
+
+  /* 头部导航 */
+  .rx-header .rx-nav {
+    display: none;
+  }
+
+  /* 子导航 */
+  .rx-header .rx-nav .rx-subnav {
+    position: static;
+    width: 100% !important;
+    border-radius: 0;
+    box-shadow: none;
+    display: none;
+  }
+
+  .rx-header .rx-nav .rx-subnav ul li {
+    padding-left: 0 !important;
+  }
+
+  .rx-header .rx-nav ul li:hover .rx-subnav {
+    /*display: none;*/
+  }
+
+  .nav-item-title .arrow {
+    top: 24px;
+    border-left-color: #fff;
+    border-top-color: #000;
+  }
+
+  .rx-subnav ul li .rx-subnav {
+    padding: 0;
+  }
+
+  .rx-subnav ul li .rx-subnav .nav-item-li,
+  .rx-subnav ul li .rx-subnav .nav-item-li:hover {
+    border-left: 0;
+  }
+
+  /* 我们的优势 */
+  .rx-we-superiority ul li {
+    width: 50%;
+    height: 250px;
+  }
+
+  /* 我们服务于 */
+  .rx-we-serve ul li {
+    width: 50%;
+  }
+
+  /* 页脚 */
+  .rx-footer .each-column {
+    width: 33.333%;
+    height: 188px;
+    text-align: center;
+    padding-left: 0 !important;
+  }
+
+  .rx-footer .each-column:last-child {
+    width: 66.666% !important;
+  }
 }

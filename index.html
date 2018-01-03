@@ -14,7 +14,7 @@
 </head>
 <body>
 <!-- 外层 -->
-<div class="rx-wrap">
+<div class="rx-wrap rx-relative">
   <!-- 头部 -->
   <div id="header" class="rx-header">
     <div class="inner rx-clearfix">
@@ -22,6 +22,10 @@
       <a href="/" class="rx-logo rx-fl">
         <img src="/images/logo.svg">
       </a>
+      <!-- 目录切换按钮 -->
+      <button type="button" class="rx-toggle">
+        <i class="icon iconfont icon-list"></i>
+      </button>
       <!--导航-->
       <div class="rx-nav rx-fr">
         <ul class="rx-clearfix web-font">
@@ -460,6 +464,8 @@
       </div>
     </div>
   </div>
+  <!-- 蒙层 -->
+  <div class="rx-mask"></div>
 </div>
 <!--脚本库-->
 <script type="text/javascript" src="/js/jquery.min.js"></script>
