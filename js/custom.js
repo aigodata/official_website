@@ -15,19 +15,46 @@ $(function () {
 		}
 	});
 
+	// 页面小于1000
+	var ka_Width = $(window).width();
+	if (ka_Width <= 1000) {
+		$('#header').addClass('rx-header-bg');
+	};
+
+	// 自适应宽度
+	$(window).resize(function () {
+		var ka_Width = $(window).width();
+		if (ka_Width >= 1000) {
+			$('#header').removeClass('rx-header-bg');
+			$('.rx-header .rx-nav').css('display', 'block');
+			$('.rx-nav-inner .rx-menu').removeClass('rx-respon-menu');
+			$('.rx-mask').css('display', 'none');
+		} else {
+			$('#header').addClass('rx-header-bg');
+			$('.rx-header .rx-nav').css('display', 'none');
+		};
+	});
+
 	// 头部导航切换按钮
 	var navBtn = $('.rx-toggle');
 	var Mask = $('.rx-mask');
 	navBtn.click(function () {
 		if ($(this).next().css("display") == "none") {
 			Mask.fadeIn();
-			$(this).parents('#header').addClass('rx-header-bg');
 			$(this).next().slideDown("slow");
 		} else {
 			Mask.fadeOut();
-			$(this).parents('#header').removeClass('rx-header-bg');
 			$(this).next().slideUp("slow");
 		}
+	});
+
+	// 点击蒙层区域
+	Mask.click(function () {
+		$(this).fadeOut();
+		navBtn.next().css('display', 'none');
+		navBtn.parents('#header').removeClass('rx-bg');
+		navBtn.next().removeClass('rx-respon-menu');
+		navBtn.next().slideUp("slow");
 	});
 
 	// //可视化展示侧边栏
