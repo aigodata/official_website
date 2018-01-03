@@ -775,8 +775,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-item-title .arrow {
   position: absolute;
-  right: 15px;
-  top: 8px;
+  right: 2px;
+  top: 20px;
   border: 5px solid #fff;
   border-left-color: #333;
   width: 0;
