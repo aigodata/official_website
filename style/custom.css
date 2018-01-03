@@ -159,7 +159,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .rx-header .inner {
   position: relative;
-  padding: 0 30px 0 20px;
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .rx-header .inner .rx-toggle {
@@ -194,22 +195,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .rx-header .rx-nav ul li:not(:last-child) {
-  margin-right: 52px;
+  margin-right: 12px;
 }
 
 .rx-header .rx-nav ul li a {
   position: relative;
   display: block;
-  line-height: 58px;
   font-size: 14px;
   color: #333;
   font-weight: 400;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 18px;
+  border-radius: 5px;
+  margin: 15px 0px;
+}
+
+.rx-header .rx-nav ul li.first-subnav a{
+  padding-right: 24px;
 }
 
 .rx-header .rx-nav ul li a i.arrow-bottom {
   position: absolute;
-  right: -15px;
-  top: 27px;
+  right: 8px;
+  top: 13px;
   border: 5px solid transparent;
   border-top-color: #333;
   width: 0;
@@ -222,16 +231,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .rx-header .rx-nav ul li:hover a,
-.rx-header .rx-nav ul li a.active,
 .rx-header .rx-nav .rx-subnav a.active {
   color: #50aff2;
+}
+
+.rx-header .rx-nav ul li a.active{
+  color: #fff;
+  background: #30a8ff;
 }
 
 /*子菜单*/
 .rx-header .rx-nav .rx-subnav {
   position: absolute;
   top: 57px;
-  right: -15px;
+  right: 0;
   border-radius: 5px;
   box-shadow: 0 10px 35px rgba(0, 0, 0, .2);
   z-index: 999;
@@ -251,7 +264,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .rx-header .rx-nav .rx-subnav ul li a {
+  height: initial;
   line-height: 34px;
+  border-radius: initial;
+  margin: 0;
+  padding: 5px 10px 5px 20px;
 }
 
 .rx-header .rx-nav ul li:hover .rx-subnav ul li a {
@@ -272,15 +289,26 @@ h1, h2, h3, h4, h5, h6 {
 /*banner*/
 .rx-banner {
   height: 720px;
-  background: url(../images/banner.jpg) no-repeat right bottom;
-  background-size: contain;
+  /*background: url(../images/banner.jpg) no-repeat right bottom;
+  background-size: contain;*/
   padding-top: 58px;
+}
+
+.rx-banner .bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(../images/banner.jpg) no-repeat right bottom;
+  background-size: cover;
 }
 
 .rx-banner .content {
   width: 100%;
   color: #3a3a3a;
   padding-left: 30px;
+  z-index: 1;
 }
 
 .rx-banner .content h2 {
@@ -314,19 +342,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*我们的优势&关于我们*/
-.rx-we-superiority ul li, .rx-about-us ul li {
+.rx-we-superiority ul li,
+.rx-about-us ul li {
   float: left;
   width: 25%;
   margin-top: 68px;
 }
 
-.rx-we-superiority ul li i, .rx-about-us ul li i {
+.rx-about-us ul li{
+  width: 33.333%;
+}
+
+.rx-we-superiority ul li i,
+.rx-about-us ul li i {
   display: inline-block;
   font-size: 36px;
   color: #30a8ff;
 }
 
-.rx-we-superiority ul li p, .rx-about-us ul li p {
+.rx-we-superiority ul li p,
+.rx-about-us ul li p {
   font-size: 14px;
   color: #888;
   line-height: 18px;

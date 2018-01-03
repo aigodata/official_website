@@ -16,27 +16,27 @@ $(function () {
 	});
 
 	// 移动端 头部菜单点击
-	var mobileBtn = $('.rx-header .rx-nav ul li.drop-down a');
+	/*var mobileBtn = $('.rx-header .rx-nav ul li.drop-down a');*/
 	// 移动端 头部菜单点击函数
-	function navClick() {
+	/*function navClick() {
 		if ($(this).next().css("display") == "none") {
 			$(this).next().slideDown("500");
 		} else {
 			$(this).next().slideUp("500");
 			$(this).next().find('.subnav').slideUp(500);
 		}
-	};
+	};*/
 
 	// 页面小于992
-	var ka_Width = $(window).width();
+	/*var ka_Width = $(window).width();
 	if (ka_Width <= 992) {
 		$('#header').addClass('rx-header-bg');
 		$('.rx-header .inner .rx-toggle').css('display', 'block');
 		mobileBtn.off('click').on('click',navClick);
-	};
+	};*/
 
 	// 自适应宽度
-	$(window).resize(function () {
+	/*$(window).resize(function () {
 		var ka_Width = $(window).width();
 		if (ka_Width >= 992) {
 			$('#header').removeClass('rx-header-bg');
@@ -50,10 +50,10 @@ $(function () {
 			$('.rx-header .inner .rx-toggle').css('display', 'block');
 			mobileBtn.off('click').on('click',navClick);
 		};
-	});
+	});*/
 
 	// 头部导航切换按钮
-	var navBtn = $('.rx-toggle');
+	/*var navBtn = $('.rx-toggle');
 	var Mask = $('.rx-mask');
 	navBtn.click(function () {
 		if ($(this).next().css("display") == "none") {
@@ -64,15 +64,15 @@ $(function () {
 			$(this).next().slideUp("slow");
 			$(this).next().find('.rx-subnav').css('display', 'none');
 		}
-	});
+	});*/
 
 	// 点击蒙层区域
-	Mask.click(function () {
+	/*Mask.click(function () {
 		$(this).fadeOut();
 		navBtn.next().css('display', 'none');
 		navBtn.parents('#header').removeClass('rx-bg');
 		navBtn.next().removeClass('rx-respon-menu');
 		navBtn.next().slideUp("slow");
-	});
+	});*/
 
 });
