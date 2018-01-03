@@ -512,7 +512,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /*关于我们*/
 .rx-about-us {
-  padding: 260px 60px;
+  padding: 160px 60px 60px;
 }
 
 .rx-about-us p.brief-introduction {
