@@ -211,7 +211,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 15px 0px;
 }
 
-.rx-header .rx-nav ul li.first-subnav a{
+.rx-header .rx-nav ul li.first-subnav a {
   padding-right: 24px;
 }
 
@@ -235,7 +235,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #50aff2;
 }
 
-.rx-header .rx-nav ul li a.active{
+.rx-header .rx-nav ul li a.active {
   color: #fff;
   background: #30a8ff;
 }
@@ -294,7 +294,7 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 58px;
 }
 
-.rx-banner .bg{
+.rx-banner .bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -349,7 +349,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 68px;
 }
 
-.rx-about-us ul li{
+.rx-about-us ul li {
   width: 33.333%;
 }
 
@@ -425,7 +425,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .rx-explain .each-wrap .margin-special {
-  margin: 180px 0px 0 60px;
+  margin: 100px 0px 0 60px;
 }
 
 .rx-explain .each-wrap h6 {
@@ -511,6 +511,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*关于我们*/
+.rx-about-us {
+  padding: 260px 60px;
+}
+
 .rx-about-us p.brief-introduction {
   font-size: 18px;
   color: #666;
