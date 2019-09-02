@@ -1,462 +1,976 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
   <title>aigodata</title>
   <!--网站图标-->
-  <link rel="shortcut icon" href="favicon.ico"/>
-  <!--阿里图标-->
-  <link rel="stylesheet" type="text/css" href="fonts/iconfont.css">
-  <!--自定义样式-->
-  <link rel="stylesheet" type="text/css" href="style/custom.css">
-  <!-- 媒体查询 -->
-  <!--<link rel="stylesheet" type="text/css" href="style/media.css">-->
+  <link rel="shortcut icon" href="images/favicon.ico"/>
+  <link rel="stylesheet" href="css/jquery.easyfader.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/custom-style.css">
+  <link rel="stylesheet" href="fonts/iconfont.css">
+  <script src="js/jquery.min.js" type="text/javascript"></script>
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="js/goTop.js" type="text/javascript"></script>
+  <script src="js/owl.carousel.min.js" type="text/javascript"></script>
+  <script src="js/jquery.easyfader.min.js" type="text/javascript"></script>
+  <script src="js/unified.js" type="text/javascript"></script>
 </head>
-<body>
-<!-- 外层 -->
-<div class="rx-wrap rx-relative">
-  <!-- 头部 -->
-  <div id="header" class="rx-header">
-    <div class="inner rx-clearfix">
-      <!--logo-->
-      <a href="/" class="rx-logo rx-fl">
-        <img src="images/logo.svg">
-      </a>
-      <!-- 目录切换按钮 -->
-      <button type="button" class="rx-toggle">
-        <i class="icon iconfont icon-list"></i>
-      </button>
-      <!--导航-->
-      <div class="rx-nav rx-fr">
-        <ul class="rx-clearfix web-font">
-          <li>
-            <a class="active" href="/">首页</a>
-          </li>
-          <li class="drop-down first-subnav">
-            <a href="javascript:void(0)">
-              数据可视化
-              <i class="arrow-bottom"></i>
-            </a>
-            <!--子导航-->
-            <div class="rx-subnav">
-              <ul class="rx-clearfix">
-                <li class="nav-item-li">
-                  <a class="nav-item" href="//aigodata.github.io/ag-ui/index.html" target="_blank">
-                    <div class="nav-item-title">ag-ui</div>
-                    <div class="nav-item-description">一套贴近原生语法的UI工具箱</div>
-                  </a>
-                </li>
-                <li class="nav-item-li">
-                  <a class="nav-item" href="//aigodata.github.io/ag-charts/index.html" target="_blank">
-                    <div class="nav-item-title">ag-charts</div>
-                    <div class="nav-item-description">一套自定义精美样式的图表库</div>
-                  </a>
-                </li>
-                <li class="nav-item-li drop-down">
-                  <a class="nav-item" href="javascript:void(0)" target="_blank">
-                    <div class="nav-item-title">components<i class="arrow"></i></div>
-                    <div class="nav-item-description">采摘软件世界里的一些优秀组件</div>
-                  </a>
-                  <div class="rx-subnav subnav">
-                    <ul class="rx-clearfix">
-                      <li class="nav-item-li">
-                        <a class="nav-item" href="components/ag-graph/website/index.html" target="_blank">
-                          <div class="nav-item-title">ag-graph</div>
-                          <div class="nav-item-description">基于D3构建的svg图形绘制框架</div>
-                        </a>
-                      </li>
-                      <li class="nav-item-li">
-                        <a class="nav-item" href="//aigodata.github.io/layDate/index.html" target="_blank">
-                          <div class="nav-item-title">layDate</div>
-                          <div class="nav-item-description">日期时间选择器(Layui团队出品)</div>
-                        </a>
-                      </li>
-                      <li class="nav-item-li">
-                        <a class="nav-item" href="//aigodata.github.io/DataTables/index.html" target="_blank">
-                          <div class="nav-item-title">DataTables</div>
-                          <div class="nav-item-description">表格插件(JQuery的开源表格插件)</div>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="nav-item-li">
-                  <a class="nav-item" href="//aigodata.github.io/ag-idea-report/index.html" target="_blank">
-                    <div class="nav-item-title">report</div>
-                    <div class="nav-item-description">实用而不失美观的报表</div>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="drop-down first-subnav">
-            <a href="javascript:void(0)">
-              产品中心
-              <i class="arrow-bottom"></i>
-            </a>
-            <!--子导航-->
-            <div class="rx-subnav">
-              <ul class="rx-clearfix">
-                <li class="nav-item-li">
-                  <a class="nav-item" href="javascript:void(0)" target="_blank">
-                    <div class="nav-item-title">aigodata BI</div>
-                    <div class="nav-item-description">产品更新中...(敬请期待)</div>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a href="about_us.html">关于我们</a>
-          </li>
-        </ul>
-      </div>
+
+<body class="index education">
+<!--头部-->
+<!--<div id="header"></div>-->
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top w-top cd-container scrolled">
+  <div class="aig-container container-fluid">
+    <!--logo-->
+    <a href="index.html" class="logobox"></a>
+    <!--折叠菜单按钮-->
+    <div id="oiBtn" class="oi p1100">
+      <em></em>
     </div>
-  </div>
-  <!-- 内容区域 -->
-  <div class="rx-content">
-    <!-- banner -->
-    <div class="rx-banner rx-relative">
-      <div class="content rx-center web-font">
-        <h2>专注可视化的数据分析公司</h2>
-        <p>简单&nbsp;&nbsp;&nbsp;专业&nbsp;&nbsp;&nbsp;值得信任</p>
-        <div>
-          <a href="javascript:void(0)" class="btn">可视化展示</a>
-        </div>
-      </div>
-      <!-- 背景 -->
-      <div class="bg"></div>
-    </div>
-    <!-- 主体部分 -->
-    <div class="rx-main">
-      <!-- 每个条目 -->
-      <div class="rx-grid-each rx-we-superiority rx-clear-padding-top web-font">
-        <h2>我们的优势</h2>
-        <ul class="rx-clearfix web-font">
+    <!--菜单列表-->
+    <ul id="navBox" class="nav navbar-nav navbar-left navbox">
+      <li class="navbox-li">
+        <a class="product-li active" href="index.html">首页</a>
+      </li>
+      <li class="navbox-li">
+        <a class="product-li" href="product.html">产品</a>
+      </li>
+      <li class="dropdown navbox-li">
+        <a href="javascript:void(0);" class="dropdown-toggle product-li" data-toggle="dropdown">
+          典型案例
+          <b class="caret"></b>
+        </a>
+        <!-- 典型案例 -->
+        <ul class="dropdown-menu">
+          <img src="images/menu-arrow.png" class="menu-arrow">
           <li>
-            <div>
-              <span class="icon-bg">
-                <i class="icon iconfont icon-sheji1"></i>
-              </span>
-              <h6>UI/UE</h6>
-              <p>从视觉到交互的改进<br/>
-                使产品焕然一新</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <span class="icon-bg">
-                <i class="icon iconfont icon-zujian"></i>
-              </span>
-              <h6>可视化组件</h6>
-              <p>优秀的可视化组件<br/>
-                提高产品竞争力</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <span class="icon-bg">
-                <i class="icon iconfont icon-denglujiemian-nenghaoshujufenxixitong"></i>
-              </span>
-              <h6>数据分析工具</h6>
-              <p>降低运营成本<br/>
-                提升企业竞争力</p>
-            </div>
-          </li>
-          <li>
-            <div>
-              <span class="icon-bg">
-                <i class="icon iconfont icon-ketang"></i>
-              </span>
-              <h6>数据学堂</h6>
-              <p>扎实的理论基础<br/>
-                数据分析有迹可循
-              </p>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <!-- 每个条目 说明部分 -->
-      <div class="rx-explain web-font">
-        <!-- 每个内部条目 -->
-        <div class="rx-clearfix each-wrap">
-          <div class="rx-fl">
-            <img src="images/visual-img.jpg" width="503">
-          </div>
-          <div class="rx-fl declare margin-l">
-            <h6 class="visual">数据可视化 Visual</h6>
-            <p>将数据以统计图形的方式进行科学的展示, <br/>
-              还原数据本身的属性, 最大化的挖掘数据<br/>
-              自身价值. 拒绝华而不实的空洞展示.</p>
-          </div>
-        </div>
-        <!-- 每个内部条目 -->
-        <div class="rx-clearfix each-wrap">
-          <div class="rx-fl declare margin-r">
-            <h6 class="bi">商业智能 BI</h6>
-            <p>我们使用大数据的强大的并行计算能力, <br/>
-              结合线上分析处理、数据挖掘等技术, <br/>
-              进行数据分析以实现商业价值 .</p >
-          </div>
-          <div class="rx-fl">
-            <img src="images/bi-img.jpg" width="573">
-          </div>
-        </div>
-        <!-- 每个内部条目 -->
-        <div class="rx-clearfix each-wrap">
-          <div class="rx-fl">
-            <img src="images/report-img.jpg" width="643">
-          </div>
-          <div class="rx-fl declare margin-l">
-            <h6 class="report">数据报表 Report</h6>
-            <p>报表就是用表格、图表等格式来动态显示数据, <br/>
-              报表 = 多样的格式 + 动态的数据, <br/>
-              多样化的报表格式满足客户所需.</p >
-          </div>
-        </div>
-        <!-- 每个内部条目 -->
-        <div class="rx-clearfix each-wrap">
-          <div class="rx-fl declare margin-special">
-            <h6 class="software">定制开发 Software Outsourcing</h6>
-            <p>我们专注于为企业降低软件项目成本，<br/>
-              擅长将软件项目中的全部或部分进行外包服务,<br/>
-              满足客户的软件需求活动.</p >
-          </div>
-          <div class="rx-fl">
-            <img src="images/software-img.jpg" width="573">
-          </div>
-        </div>
-      </div>
-      <!-- 每个条目 -->
-      <div class="rx-grid-each rx-we-serve web-font">
-        <h2>我们服务于</h2>
-        <ul class="rx-clearfix service-ul">
-          <li>
-            <div>
-              <img src="images/pic_1.png" width="200" class="rx-center">
-            </div>
-          </li>
-          <li>
-            <div>
-              <img src="images/pic_2.png" width="200" class="rx-center">
-            </div>
-          </li>
-          <li>
-            <div>
-              <img src="images/pic_3.png" width="200" class="rx-center">
-            </div>
-          </li>
-          <li>
-            <div>
-              <img src="images/pic_4.png" width="200" class="rx-center">
-            </div>
-          </li>
-          <li>
-            <div>
-              <img src="images/pic_5.png" width="200" class="rx-center">
-            </div>
-          </li>
-          <li>
-            <div>
-              <img src="images/pic_6.png" width="200" class="rx-center">
-            </div>
-          </li>
-          <li>
-            <div>
-              <img src="images/pic_7.png" width="200" class="rx-center">
-            </div>
-          </li>
-          <li>
-            <div>
-              <img src="images/pic_8.png" width="200" class="rx-center">
-            </div>
-          </li>
-          <li>
-            <div>
-              <img src="images/pic_9.png" width="200" class="rx-center">
-            </div>
-          </li>
-          <li>
-            <div>
-              <img src="images/pic_10.png" width="200" class="rx-center">
-            </div>
-          </li>
-          <li>
-            <div>
-              <img src="images/pic_17.png" width="200" class="rx-center">
-            </div>
-          </li>
-          <li>
-            <div>
-              <img src="images/pic_14.png" width="200" class="rx-center">
-            </div>
-          </li>
-          <li>
-            <div>
-              <img src="images/pic_12.png" width="200" class="rx-center">
-            </div>
-          </li>
-          <li>
-            <div>
-              <img src="images/pic_13.png" width="200" class="rx-center">
-            </div>
-          </li>
-          <li>
-            <div>
-              <img src="images/pic_19.png" width="200" class="rx-center">
-            </div>
-          </li>
-          <li>
-            <div>
-              <img src="images/pic_18.png" width="200" class="rx-center">
-            </div>
-          </li>
-          <li>
-            <div>
-              <img src="images/pic_0.png" width="200" class="rx-center">
-            </div>
-          </li>
-          <li>
-            <div>
-              <img src="images/pic_11.png" width="200" class="rx-center">
-            </div>
-          </li>
-          <li>
-            <div>
-              <img src="images/pic_15.png" width="200" class="rx-center">
-            </div>
-          </li>
-          <li>
-            <div>
-              <img src="images/pic_16.png" width="200" class="rx-center">
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <!-- 页脚 -->
-  <div class="rx-footer web-font">
-    <div class="content rx-clearfix">
-      <div class="each-column">
-        <dl>
-          <dt>关于我们</dt>
-          <dd>
-            <a href="about_us.html#about_us">公司简介</a>
-          </dd>
-          <dd>
-            <a href="about_us.html#about_us">团队介绍</a>
-          </dd>
-          <dd>
-            <a href="javascript:void(0)">工作机会</a>
-          </dd>
-          <dd>
-            <a href="about_us.html#join_us">联系我们</a>
-          </dd>
-        </dl>
-      </div>
-      <div class="each-column">
-        <dl>
-          <dt>数据可视化</dt>
-          <dd>
-            <a href="javascript:void(0)">ag-ui</a>
-          </dd>
-          <dd>
-            <a href="javascript:void(0)">ag-charts</a>
-          </dd>
-          <dd>
-            <a href="javascript:void(0)">report</a>
-          </dd>
-        </dl>
-      </div>
-      <div class="each-column">
-        <dl>
-          <dt>产品中心</dt>
-          <dd>
-            <a href="javascript:void(0)">aigodata BI</a>
-          </dd>
-          <dd>
-            <a href="javascript:void(0)">aigodata Report</a>
-          </dd>
-          <dd>
-            <a href="javascript:void(0)">aigodata Log Analysis</a>
-          </dd>
-        </dl>
-      </div>
-      <div class="each-column">
-        <dl>
-          <dt>技术支持</dt>
-          <dd>
-            <a href="javascript:void(0)">下载</a>
-          </dd>
-          <dd>
-            <a href="javascript:void(0)">更新日志</a>
-          </dd>
-          <dd>
-            <a href="javascript:void(0)">文档</a>
-          </dd>
-          <dd>
-            <a href="javascript:void(0)">帮助中心</a>
-          </dd>
-        </dl>
-      </div>
-      <div class="each-column">
-        <dl>
-          <dt>联系我们</dt>
-          <dd>电话：010-53644890（周一至周五 9:30-17:30）</dd>
-          <dd>邮箱：aigodata@aigodata.com</dd>
-          <dd>商务合作：13581857664（田经理）</dd>
-          <dd>地址：北京海淀区中关村南大街36号12号楼16层</dd>
-        </dl>
-      </div>
-    </div>
-    <!-- 友情链接&版权 -->
-    <div class="bottom">
-      <!-- 友情链接 -->
-      <div class="friendly-link">
-        <ul class="rx-clearfix">
-          <li>友情链接</li>
-          <li>
-            <a href="javascript:void(0)">瑞讯科技</a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">观安科技</a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">盛华安</a>
-          </li>
-        </ul>
-      </div>
-      <!--版权-->
-      <div class="copyright">
-        © 2017 AIGODATA SOFTWARE. 保留所有权利
-        <a href="//www.miitbeian.gov.cn/">京ICP备17069247号</a>
-        <!-- 右侧 -->
-        <div class="right">
-          <a href="javascript:void(0)" class="rx-relative">
-            <i class="icon iconfont icon-weixin"></i>
-            <!-- 二维码扫描 -->
-            <div class="code">
-              <h6>商务合作</h6>
-              <p>请扫描二维码</p>
-              <div class="wechat">
-                <img src="images/wechat.jpg" width="90" height="90">
+            <a href="safe.html">
+              <img src="images/case-pic01.png" class="pic">
+              <div class="con">
+                <div class="up">网络安全行业</div>
+                <div class="down">能够将抽象的网络和系统数据进行可视化呈现，从而对网络中的安全设备、网络设备、应用系统、操作系统等整体环境进行安全状态监测，帮助用户快速掌握网络状况，识别网络异常、入侵，把握网络安全事件发展趋势，全方位感知网络安全态势。</div>
               </div>
-            </div>
-          </a>
-          <a href="javascript:void(0)">
-            <i class="icon iconfont icon-github"></i>
-          </a>
+            </a>
+          </li>
+          <li>
+            <a href="education.html">
+              <img src="images/case-pic02.png" class="pic">
+              <div class="con">
+                <div class="up">教育服务行业</div>
+                <div class="down">能够充分地利用各种教、管、训等业务系统，优化管理工作的流程，规范管理制度，提高学校管理的工作效率。形成院校部门之间数据的横向流通和纵向流通，跨系统的数据进行分析和建模，形成可视化的数据展示，大数据平台统一管理，积累如学生信息、考试成绩、教职工信息、学籍管理、学风管理等各种基础数据的价值。</div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0);">
+              <img src="images/case-pic03.png" class="pic">
+              <div class="con">
+                <div class="up">医疗服务行业</div>
+                <div class="down">帮助医院医疗机构更科学地、更有效地实施规划、执行、监管等职能，对医疗数据进行实时和动态的监管。为医疗机构提供医疗卫生方面的数据分析和信息共享服务。</div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="navbox-li">
+        <a class="product-li" href="cooperative_partner.html">合作伙伴</a>
+      </li>
+      <li class="navbox-li">
+        <a class="product-li" href="about_us_page.html">关于我们</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!--banner-->
+<div class="banner">
+  <div id="dowebok" class="fader">
+    <div class="slide">
+      <div class="banner-con bg-04">
+        <div class="banner-font">
+          <p class="header">数据服务智能管理平台</p>
+          <p class="con">高效 · 可视 · 简捷 · 国产</p>
+          <!--了解更多-->
+          <a href="product.html" class="more blacks">了解更多</a>
         </div>
       </div>
     </div>
+    <!-- <div class="fader_controls">
+      <div class="page prev" data-target="prev"></div>
+      <div class="page next" data-target="next"></div>
+      <ul class="pager_list"></ul>
+    </div> -->
   </div>
-  <!-- 蒙层 -->
-  <div class="rx-mask"></div>
 </div>
-<!--脚本库-->
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<!--自定义脚本-->
-<script type="text/javascript" src="js/custom.js"></script>
+
+<!-- 数据服务智能管理平台 -->
+<div class="aig-container p-120 div3" id="div3">
+  <!--标题-->
+  <h2 style="margin-bottom: 50px;">
+    <span>数据服务智能管理平台</span>
+    <p>帮你构建自己的智能大数据安全分析与管理平台</p>
+  </h2>
+  <!--列表-->
+  <ul id="enhancement_function_list" class="enhancement_function_list no-margin-top">
+    <li>
+      <div data-scroll-reveal="enter bottom over 0.5s and move 100px after 0.3s">
+        <div class="icon-icon-security-bb">
+          <i class="icon iconfont icon-quanmianhua"></i>
+        </div>
+        <div class="con-box">
+          <h3>全面化</h3>
+          <p class="second-con">一站式自助式数据分析可视化平台</p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div data-scroll-reveal="enter bottom over 0.5s and move 100px after 0.3s">
+        <div class="icon-icon-security-bb">
+          <i class="icon iconfont icon-minjiehua"></i>
+        </div>
+        <div class="con-box">
+          <h3>敏捷化</h3>
+          <p class="second-con">支持多数据源，方便数据对接</p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div data-scroll-reveal="enter bottom over 0.5s and move 100px after 0.3s">
+        <div class="icon-icon-security-bb">
+          <i class="icon iconfont icon-dingzhihuajishu"></i>
+        </div>
+        <div class="con-box">
+          <h3>定制化</h3>
+          <p class="second-con">支持个性化定制需求</p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div data-scroll-reveal="enter bottom over 0.5s and move 100px after 0.3s">
+        <div class="icon-icon-security-bb">
+          <i class="icon iconfont icon-zujiantuozhuai"></i>
+        </div>
+        <div class="con-box">
+          <h3>简单化</h3>
+          <p class="second-con">零编码、点击拖拽式操作</p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div data-scroll-reveal="enter bottom over 0.5s and move 100px after 0.3s">
+        <div class="icon-icon-security-bb">
+          <i class="icon iconfont icon-jiqunduoyang"></i>
+        </div>
+        <div class="con-box">
+          <h3>多样化</h3>
+          <p class="second-con">丰富多样图表技术、种类，<br>动态交互</p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div data-scroll-reveal="enter bottom over 0.5s and move 100px after 0.3s">
+        <div class="icon-icon-security-bb">
+          <i class="icon iconfont icon-kaifangxing"></i>
+        </div>
+        <div class="con-box">
+          <h3>开放化</h3>
+          <p class="second-con">支持独立部署、服务集成、<br>Web集成等</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<!-- 典型案例 -->
+<div class="index-screen01">
+  <div class="aig-container p-120">
+    <h2 class="header-con-header margin-bottom-80">
+      <span>典型案例</span>
+    </h2>
+    <div class="header-con no-padding-bottom">
+      <div data-scroll-reveal="enter bottom over 0.5s and move 100px after 0.3s">
+        <ul id="tc_list" class="tc_list tc_list_new clearfix mhn-slide owl-carousel">
+          <li class="mhn-item">
+            <div class="li-con" data-scroll-reveal="enter bottom over 0.5s and move 100px after 0.3s">
+              <img src="images/case-pic01.png" class="case-pic">
+              <h3>网络安全行业</h3>
+              <div class="font-con">能够将抽象的网络和系统数据进行可视化呈现，从而对网络中的安全设备、网络设备、应用系统、操作系统等整体环境进行安全状态监测，帮助用户快速掌握网络状况，识别网络异常、入侵，把握网络安全事件发展趋势，全方位感知网络安全态势。</div>
+              <a href="safe.html" class="more">了解更多 →</a>
+            </div>
+          </li>
+          <li class="mhn-item">
+            <div class="li-con" data-scroll-reveal="enter bottom over 0.5s and move 100px after 0.3s">
+              <img src="images/case-pic02.png" class="case-pic">
+              <h3>教育服务行业</h3>
+              <div class="font-con">能够充分地利用各种教、管、训等业务系统，优化管理工作的流程，规范管理制度，提高学校管理的工作效率。形成院校部门之间数据的横向流通和纵向流通，跨系统的数据进行分析和建模，形成可视化的数据展示，大数据平台统一管理，积累如学生信息、考试成绩、教职工信息、学籍管理、学风管理等各种基础数据的价值。</div>
+              <a href="education.html" class="more">了解更多 →</a>
+            </div>
+          </li>
+          <li class="mhn-item">
+            <div class="li-con" data-scroll-reveal="enter bottom over 0.5s and move 100px after 0.3s">
+              <img src="images/case-pic03.png" class="case-pic">
+              <h3>医疗服务行业</h3>
+              <div class="font-con">帮助医院医疗机构更科学地、更有效地实施规划、执行、监管等职能，对医疗数据进行实时和动态的监管。为医疗机构提供医疗卫生方面的数据分析和信息共享服务。</div>
+              <a href="javascript:void(0)" class="more">了解更多 →</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 我们服务于 -->
+<div class="technical_consultation_box" id="system">
+  <div class="aig-container">
+    <h2 class="header-con-header margin-bottom-80">
+      <span>我们服务于</span>
+    </h2>
+    <div class="header-con no-padding-bottom">
+      <ul class="logo-box">
+          <li>
+            <img src="images/us-logo01.png">
+          </li>
+          <li>
+            <img src="images/us-logo02.png">
+          </li>
+          <li>
+            <img src="images/us-logo03.png">
+          </li>
+          <li>
+            <img src="images/us-logo04.png">
+          </li>
+          <li>
+            <img src="images/us-logo05.png">
+          </li>
+          <li>
+            <img src="images/us-logo06.png">
+          </li>
+          <li>
+            <img src="images/us-logo07.png">
+          </li>
+          <li>
+            <img src="images/us-logo08.png">
+          </li>
+          <li>
+            <img src="images/us-logo09.png">
+          </li>
+          <li>
+            <img src="images/us-logo10.png">
+          </li>
+          <li>
+            <img src="images/us-logo11.png">
+          </li>
+          <li>
+            <img src="images/us-logo12.png">
+          </li>
+          <li>
+            <img src="images/us-logo13.png">
+          </li>
+          <li>
+            <img src="images/us-logo14.png">
+          </li>
+          <li>
+            <img src="images/us-logo15.png">
+          </li>
+          <li>
+            <img src="images/us-logo16.png">
+          </li>
+          <li>
+            <img src="images/us-logo17.png">
+          </li>
+          <li>
+            <img src="images/us-logo18.png">
+          </li>
+        </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 底部 -->
+<!--<div id="footer"></div>-->
+<div class="company-information">
+  <ul class="company-information-list aig-container" data-scroll-reveal="enter bottom over 0s and move 100px after 0s">
+    <li>
+      <div class="header">关于我们</div>
+      <a class="con" href="about_us_page.html">公司简介</a>
+      <a class="con" href="javascript:void(0)">团队介绍</a>
+      <a class="con" href="javascript:void(0)">工作机会</a>
+      <a class="con" href="javascript:void(0)">联系我们</a>
+    </li>
+    <li>
+      <div class="header">产品中心</div>
+      <a class="con" href="safe.html">网络安全行业</a>
+      <a class="con" href="education.html">教育服务行业</a>
+      <a class="con" href="javascript:void(0)">医疗服务行业</a>
+    </li>
+    <li>
+      <div class="header">技术支持</div>
+      <a class="con" href="javascript:void(0)">下载</a>
+      <a class="con" href="javascript:void(0)">更新日志</a>
+      <a class="con" href="javascript:void(0)">文档</a>
+      <a class="con" href="javascript:void(0)">帮助中心</a>
+    </li>
+    <li class="info">
+      <div class="header">联系我们</div>
+      <div class="con">商务合作: 15010982341(周经理)</div>
+      <div class="con">邮箱: 1071793651@qq.com</div>
+      <div class="con">地址: 北京市昌平区回龙观东大街创客广场A座三层</div>
+    </li>
+    <li class="wechatout">
+      <img src="images/wechat.jpg">
+      商务合作<br>请扫描二维码
+    </li>
+  </ul>
+
+  <div class="friendship-links">
+    <div class="name">©2017&nbsp;AIGODATA&nbsp;SOFTWARE.&nbsp;保留所有权利&nbsp;京ICP备17069247号</div>
+    <div class="right">
+      <!--<a href="javascript:void(0)" class="rx-relative">-->
+      <!--<i class="icon iconfont icon-weixin"></i>-->
+      <!--&lt;!&ndash; 二维码扫描 &ndash;&gt;-->
+      <!--<div class="code">-->
+      <!--<h6>商务合作</h6>-->
+      <!--<p>请扫描二维码</p>-->
+      <!--<div class="wechat">-->
+      <!--<img src="images/wechat.jpg" width="90" height="90">-->
+      <!--</div>-->
+      <!--</div>-->
+      <!--</a>-->
+      <a href="javascript:void(0)">
+        <i class="icon iconfont icon-github"></i>
+      </a>
+    </div>
+    <div style="clear: both"></div>
+  </div>
+</div>
+
+<!--回到顶部	-->
+<a href="#0" class="cd-top">
+  <img src="images/cd-top-arrow.svg">
+</a>
+
+<style>
+  .index.education .owl-carousel .owl-item img {
+    display: inline;
+    width: auto;
+  }
+
+  .index.education .tc_list li {
+    width: 25%;
+    margin: 0;
+    box-shadow: none;
+    padding: 13px;
+  }
+
+  .index.education .tc_list li.mhn-item {
+    width: 100%;
+  }
+
+  .index.education .tc_list li.mhn-item .case-pic {
+    display: block;
+    width: 153px;
+    height: 179px;
+    margin: 40px auto;
+  }
+
+  .index.education .tc_list li.mhn-item .down-pic {
+    width: 100%;
+  }
+
+  .index.education .tc_list li .key-ul li {
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
+    padding: 13px;
+    min-height: auto;
+  }
+
+  .index.education .tc_list li .li-con {
+    box-shadow: 0 0 15px 5px rgba(202,203,204,0.3);
+    border-radius: 5px;
+    min-height: 470px;
+    position: relative;
+    background-color: #ffffff;
+    overflow: hidden;
+  }
+
+  .index.education .tc_list li .li-con h3 {
+    text-align: center;
+    font-size: 22px;
+    color: #333333;
+    margin-bottom: 16px;
+  }
+
+  .index.education .tc_list li .li-con .font-con {
+    color: #999999;
+    font-size: 13px;
+    text-align: justify;
+    padding: 0 20px;
+  }
+
+  .index.education .tc_list li .li-con a.more {
+    display: block;
+    font-size: 14px;
+    color: #1aa6ff;
+    text-align: center;
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+  }
+
+  .index.education .tc_list li .li-con a.more:hover {
+    color: #0886d6;
+  }
+
+  .index.education .tc_list li .font-con01 {
+    width: 70%;
+    padding-bottom: 50px;
+  }
+
+  .index.education .banner-con.bg-04 a.more {
+    background: #ffffff;
+    color: #000000;
+    transition: .5s;
+    box-shadow: 0 6px 6px rgba(73, 73, 233, 0.4);
+    display: block;
+    width: 160px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 25px;
+    text-align: center;
+    margin: 63px auto 0 auto;
+  }
+
+  .index.education .technical_consultation_box .tc_list {
+    margin-bottom: 0;
+  }
+
+  .index.education .technical_consultation_box .tc_list.tc_list_new li h3 {
+    margin-top: 0;
+  }
+
+  .index.education .technical_consultation_box .tc_list li {
+    width: 33.333%;
+  }
+
+  .index.education .technical_consultation_box .tc_list li .font-con.after:before {
+    display: none;
+  }
+
+  .index.education .technical_consultation_box .tc_list li i {
+    color: #1aa6ff;
+    margin-top: 40px;
+  }
+
+  .index.education .product-value {
+    overflow: hidden;
+    margin-bottom: -50px;
+  }
+
+  .index.education .product-value li {
+    width: 50%;
+    float: left;
+  }
+
+  .index.education .product-value li .con {
+    float: left;
+    width: calc(100% - 150px);
+    margin-left: 30px;
+  }
+
+  .index.education .product-value li .con h1 {
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 17px;
+    margin-top: 20px;
+  }
+
+  .index.education .product-value li .con p {
+    font-size: 18px;
+    color: #999999;
+    padding-left: 0;
+    height: 26px;
+    line-height: 26px;
+    text-align: justify;
+  }
+
+  .index.education .product-con .product-page .img {
+    width: 390px;
+    height: 325px;
+    box-shadow: none;
+    border: none;
+  }
+
+  .index.education .enhancement_function_list {
+    padding-top: 15px;
+  }
+
+  .index.education .enhancement_function_list li h3 {
+    color: #666666;
+    margin-bottom: 25px;
+  }
+
+  .index.education .enhancement_function_list li p.second-con {
+    font-size: 13px;
+    padding: 0 20px;
+  }
+
+  .index.education .enhancement_function_list li {
+    width: 16.666%;
+  }
+
+  .index.education .enhancement_function_list li .con-box {
+    width: 100%;
+  }
+
+  .index.education .enhancement_function_list li .icon-icon-security-bb {
+    width: 124px;
+    height: 124px;
+    line-height: 124px;
+  }
+
+  .index.education .enhancement_function_list li .icon-icon-security-bb i {
+    font-size: 46px;
+  }
+
+  .index .product-manual h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 300;
+    color: #ffffff;
+    margin: 75px 0 20px 0;
+  }
+
+  .index .product-manual .tc {
+    cursor: pointer;
+  }
+
+  .index .product-manual a.tc {
+    background: #ffffff;
+    margin-bottom: 30px;
+    color: #21a9ff;
+    transition: .5s;
+    margin-top: 20px;
+    box-shadow: 0 6px 6px rgba(10, 143, 221, 0.64);
+    cursor: pointer;
+  }
+
+  .index .product-manual a.tc:hover {
+    background: #ffffff;
+    box-shadow: 0 6px 6px rgba(10, 143, 221, 0.8);
+    transform: translateY(-3px);
+  }
+
+  .index .two-pic {
+    position: relative;
+    height: 303px !important;
+  }
+
+  .index .two-pic .pic01 {
+    position: absolute;
+    width: 378px;
+    left: 0;
+    top: 0;
+  }
+
+  .index .two-pic .pic02 {
+    position: absolute;
+    width: 306px;
+    right: 0;
+    top: 110px;
+  }
+
+  .index .suite-more {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: -30px;
+  }
+
+  .index .explain p {
+    font-size: 18px;
+    color: #666666;
+    line-height: 32px;
+    margin: 100px 0;
+    text-indent: 2em;
+    text-align: justify;
+  }
+
+  .index .phone-show {
+    display: none;
+  }
+
+  .index .enhancement_function_list li {
+    width: 20%;
+  }
+
+  @media screen and (max-width: 767px) and (min-width: 320px) {
+    .index .enhancement_function_list li {
+      width: 90%;
+    }
+  }
+
+  .index .owl-carousel .owl-item img {
+    display: inline;
+    width: auto;
+  }
+
+  .index .technical_consultation_box .tc_list li {
+    width: 25%;
+    margin: 0;
+    box-shadow: none;
+    padding: 13px;
+  }
+
+  .index .technical_consultation_box .tc_list li.mhn-item {
+    width: 100%;
+  }
+
+  .technical_consultation_box .tc_list li.mhn-item .down-pic {
+    width: 100%;
+  }
+
+  .index .technical_consultation_box .tc_list li .key-ul li {
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
+    padding: 13px;
+    min-height: auto;
+  }
+
+  .index .technical_consultation_box .tc_list li .li-con {
+    box-shadow: 0 0 15px 5px rgba(202, 203, 204, 0.3);
+    border-radius: 5px;
+    min-height: 470px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .index .technical_consultation_box .tc_list li .font-con01 {
+    width: 70%;
+    padding-bottom: 50px;
+  }
+
+  @media screen  and (min-width: 1500px)and (max-width: 1788px) {
+    .banner-con .banner-pic {
+      width: 550px;
+      top: 272px;
+    }
+
+    .banner-con .banner-font {
+      left: 220px;
+      top: 290px;
+    }
+
+    .banner-con .banner-font .header {
+      font-size: 42px;
+      margin: 0 0 35px 0;
+    }
+
+    .banner-con .banner-font .con {
+      font-size: 22px;
+    }
+
+    .banner-con .tc {
+      left: 111px;
+    }
+  }
+
+  @media screen and (max-width: 1500px) and (min-width: 1201px) {
+    .banner-con .banner-font {
+      top: 170px;
+      left: 127px;
+    }
+
+    .banner-con .banner-font .header {
+      font-size: 35px;
+    }
+
+    .banner-con .banner-font .con {
+      font-size: 19px;
+    }
+
+    .banner-con .tc {
+      left: 65px;
+    }
+  }
+
+  @media screen  and (min-width: 1024px)and (max-width: 1366px) {
+    .company-information-list {
+      /*padding: 0 40px;*/
+    }
+
+    .company-information-list li .logo {
+      right: 30px;
+    }
+  }
+
+  @media screen  and (min-width: 768px)and (max-width: 1024px) {
+    .aig-container h2 span {
+      font-size: 32px;
+    }
+
+    .enhancement_function_list {
+      margin-top: 40px;
+    }
+
+    .technical_consultation_box .tc_list {
+      margin-top: 20px;
+    }
+
+    .index .index-screen01 {
+      padding: 0;
+    }
+
+    .index .aig-container {
+      width: 100%;
+    }
+
+    .index .pmax {
+      padding: 80px 40px;
+    }
+
+    .index .enhancement_function_list li {
+      width: 50%;
+      margin: 10px 0;
+      min-height: 302px;
+    }
+
+    .index .enhancement_function_list li:nth-child(2n) {
+      margin: 10px 0;
+    }
+
+    .index .enhancement_function_list li:nth-child(3n) {
+      margin: 10px 0;
+    }
+
+    .index .technical_consultation_box .tc_list li {
+      width: 50%;
+    }
+
+    .technical_consultation_box {
+      padding: 80px 40px;
+    }
+
+    .banner-con.bg-03 a.more {
+      margin-top: 88px;
+    }
+  }
+
+  @media screen  and (min-width: 320px)and (max-width: 767px) {
+    .index .technical_consultation_box {
+      padding-bottom: 30px;
+    }
+
+    .index .enhancement_function_list li .con-box {
+      width: 100%;
+    }
+
+    .index .suite-more {
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .index .fader .prev {
+      display: none;
+    }
+
+    .index .fader .next {
+      display: none;
+    }
+
+    .index .banner-con.bg-02 .banner-font .header {
+      width: 100%;
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    .index .banner-con.bg-03 .banner-font .header {
+      width: 100%;
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    .index .banner-con .banner-pic {
+      width: 220px;
+    }
+
+    .index .banner-con .banner-font .header {
+      margin-top: 50px;
+    }
+
+    .index .banner-con.bg-02 .banner-font .header {
+      margin-top: 150px;
+    }
+
+    .index .banner-con.bg-03 .banner-font .header {
+      margin-top: 150px;
+    }
+  }
+
+  .index .technical_consultation_box .tc_list li .font-con.after {
+    text-align: justify;
+    padding: 0 40px;
+    margin-top: 15px;
+    list-style: circle;
+    position: relative;
+  }
+
+  .index .technical_consultation_box .tc_list li .font-con.after:before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #666666;
+    position: absolute;
+    top: 8px;
+    left: 25px;
+  }
+
+  .mhn-slide .mhn-item {
+    width: 100%;
+    padding: 10px
+  }
+
+  .mhn-slide .owl-stage-outer {
+    z-index: 1
+  }
+
+  .mhn-slide .owl-nav {
+    color: #333;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0
+  }
+
+  .mhn-slide .owl-nav svg {
+    color: currentColor;
+    fill: #d1d1d1;
+    transform: scale(0.8);
+  }
+
+  .mhn-slide .owl-nav svg:hover {
+    fill: #1aa6ff;
+  }
+
+  .mhn-slide .owl-nav .disabled {
+    /* display:none */
+  }
+
+  .mhn-slide .owl-prev,
+  .mhn-slide .owl-next {
+    top: 220px;
+    z-index: 2;
+    width: 60px;
+    position: absolute;
+  }
+
+  .mhn-slide .owl-prev {
+    left: -55px
+  }
+
+  .mhn-slide .owl-next {
+    right: -55px
+  }
+</style>
+
+<script src="js/ft-carousel.min.js"></script>
+<script src="js/scrollReveal.js"></script>
+<script>
+  if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
+    (function () {
+      window.scrollReveal = new scrollReveal({
+        reset: true
+      });
+    })();
+  }
+  ;
+  $("#carousel_2").FtCarousel({
+    index: 0,
+    auto: false
+  });
+</script>
+<script>
+  $(function () {
+    $("#header").load("header.html");
+    $("#footer").load("footer.html");
+  })
+
+  //根据参数名获得该参数  pname等于想要的参数名
+  function getParam(pname) {
+    var params = location.search.substr(1); //  获取参数 平且去掉？
+    var ArrParam = params.split('&');
+    if (ArrParam.length == 1) {
+      //只有一个参数的情况
+      return params.split('=')[1];
+    } else {
+      //多个参数参数的情况
+      for (var i = 0; i < ArrParam.length; i++) {
+        if (ArrParam[i].split('=')[0] == pname) {
+          return ArrParam[i].split('=')[1];
+        }
+      }
+    }
+  }
+
+  // 轮播
+  $(function () {
+    $('.mhn-slide').owlCarousel({
+      nav: true,
+      //loop:true,
+      slideBy: 'page',
+      rewind: false,
+      responsive: {
+        0: {items: 1},
+        480: {items: 2},
+        600: {items: 3},
+        // 1000: {items: 4}
+      },
+      smartSpeed: 70,
+      onInitialized: function (e) {
+        $(e.target).find('img').each(function () {
+          if (this.complete) {
+            $(this).closest('.mhn-inner').find('.loader-circle').hide();
+            $(this).closest('.mhn-inner').find('.mhn-img').css('background-image', 'url(' + $(e.target).attr('src') + ')');
+          } else {
+            $(this).bind('load', function (e) {
+              $(e.target).closest('.mhn-inner').find('.loader-circle').hide();
+              $(e.target).closest('.mhn-inner').find('.mhn-img').css('background-image', 'url(' + $(e.target).attr('src') + ')');
+            });
+          }
+        });
+      },
+      navText: ['<svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path></svg>', '<svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg>']
+    });
+  });
+
+  // 回到顶部
+  function pageScroll() {
+    //把内容滚动指定的像素数（第一个参数是向右滚动的像素数，第二个参数是向下滚动的像素数）
+    window.scrollBy(0, -100);
+    //延时递归调用，模拟滚动向上效果
+    scrolldelay = setTimeout('pageScroll()', 100);
+    //获取scrollTop值，声明了DTD的标准网页取document.documentElement.scrollTop，否则取document.body.scrollTop；因为二者只有一个会生效，另一个就恒为0，所以取和值可以得到网页的真正的scrollTop值
+    var sTop = document.documentElement.scrollTop + document.body.scrollTop;
+    //判断当页面到达顶部，取消延时代码（否则页面滚动到顶部会无法再向下正常浏览页面）
+    if (sTop == 0) clearTimeout(scrolldelay);
+  }
+
+  // 轮播图
+  $(function () {
+    $('#dowebok').easyFader({
+      fadeDur: 300
+    });
+  });
+</script>
+<script src="js/clear_s_screen_dslr.js"></script>
 </body>
 </html>

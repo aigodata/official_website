@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <!--网站图标-->
+  <link rel="shortcut icon" href="images/favicon.ico"/>
+  <link rel="stylesheet" href="css/jquery.easyfader.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/custom-style.css">
+  <link rel="stylesheet" href="fonts/iconfont.css">
+  <script src="js/jquery.min.js" type="text/javascript"></script>
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="js/goTop.js" type="text/javascript"></script>
+  <script src="js/owl.carousel.min.js" type="text/javascript"></script>
+  <script src="js/jquery.easyfader.min.js" type="text/javascript"></script>
+  <script src="js/unified.js" type="text/javascript"></script>
+</head>
+<body>
+<!--头部-->
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top w-top cd-container scrolled">
+  <div class="aig-container container-fluid">
+    <!--logo-->
+    <a href="index.html" class="logobox"></a>
+    <!--折叠菜单按钮-->
+    <div id="oiBtn" class="oi p1100">
+      <em></em>
+    </div>
+    <!--菜单列表-->
+    <ul id="navBox" class="nav navbar-nav navbar-left navbox">
+      <li class="navbox-li">
+        <a class="product-li" href="index.html">首页</a>
+      </li>
+      <li class="navbox-li">
+        <a class="product-li" href="product.html">产品</a>
+      </li>
+      <li class="dropdown navbox-li">
+        <a href="javascript:void(0);" class="dropdown-toggle product-li" data-toggle="dropdown">
+          典型案例
+          <b class="caret"></b>
+        </a>
+        <!-- 典型案例 -->
+        <ul class="dropdown-menu">
+          <img src="images/menu-arrow.png" class="menu-arrow">
+          <li>
+            <a href="safe.html">
+              <img src="images/case-pic01.png" class="pic">
+              <div class="con">
+                <div class="up">网络安全行业</div>
+                <div class="down">能够将抽象的网络和系统数据进行可视化呈现，从而对网络中的安全设备、网络设备、应用系统、操作系统等整体环境进行安全状态监测，帮助用户快速掌握网络状况，识别网络异常、入侵，把握网络安全事件发展趋势，全方位感知网络安全态势。</div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="education.html">
+              <img src="images/case-pic02.png" class="pic">
+              <div class="con">
+                <div class="up">教育服务行业</div>
+                <div class="down">能够充分地利用各种教、管、训等业务系统，优化管理工作的流程，规范管理制度，提高学校管理的工作效率。形成院校部门之间数据的横向流通和纵向流通，跨系统的数据进行分析和建模，形成可视化的数据展示，大数据平台统一管理，积累如学生信息、考试成绩、教职工信息、学籍管理、学风管理等各种基础数据的价值。</div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0);">
+              <img src="images/case-pic03.png" class="pic">
+              <div class="con">
+                <div class="up">医疗服务行业</div>
+                <div class="down">帮助医院医疗机构更科学地、更有效地实施规划、执行、监管等职能，对医疗数据进行实时和动态的监管。为医疗机构提供医疗卫生方面的数据分析和信息共享服务。</div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="navbox-li">
+        <a class="product-li" href="cooperative_partner.html">合作伙伴</a>
+      </li>
+      <li class="navbox-li">
+        <a class="product-li" href="about_us_page.html">关于我们</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  $(".product-li").on("click",function(){
+    $(".product-li").removeClass("active")
+    $(this).addClass("active")
+  })
+</script>
+</body>
+</html>

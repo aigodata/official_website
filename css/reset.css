@@ -1,0 +1,83 @@
+@charset "utf-8";
+/*reset*/
+* {
+  font-weight: 300;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, div, dl, dt, dd, ul, ol, li, p, blockquote, pre, hr, figure, table, caption, th, td, form, fieldset, legend, input, button, textarea, menu {
+    /* [disabled]margin:0; */
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", 微软雅黑, Arial, sans-serif;
+    margin: 0;
+    color: #181818;
+}
+
+body {
+  overflow-x: auto;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", 微软雅黑, Arial, sans-serif;
+  font-weight: 300;
+  min-width: 1350px;
+}
+
+input, textarea {
+    outline-style: none;
+}
+
+fieldset, img {
+    border: 0;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-weight: normal;
+    font-style: normal;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    font-size: 100%;
+}
+
+abbr, acronym {
+    border: 0;
+}
+
+p {
+    word-wrap: break-word;
+}
+
+/*ie10*/
+a:active {
+    text-decoration: none !important;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+a:link {
+    text-decoration: none !important;
+}
+
+a:visited {
+    text-decoration: none !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.clearfix:after {
+    content: "."; /*加一段内容*/
+    display: block; /*让生成的元素以块级元素显示，占满剩余空间*/
+    height: 0; /*避免生成的内容破坏原有布局高度*/
+    clear: both; /*清除浮动*/
+    visibility: hidden; /*让生成的内容不可见*/
+}
+
+.clearfix {
+    zoom: 1; /*为IE6，7的兼容性设置*/
+}
