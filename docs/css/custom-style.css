@@ -1664,7 +1664,7 @@ a.form_submit {
 
   /*.company-information-list li{width: 20%;}*/
   .company-information-list li .header {
-    margin-bottom: 20px;
+    margin: 20px 0 10px 0;
   }
 
   /*重置动效*/
