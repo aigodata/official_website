@@ -591,7 +591,7 @@ h2.header-con-header span {
 }
 
 .banner-con.bg-02 a.more:hover {
-  transform: translateY(-3px);
+
 }
 
 .banner-con.bg-03 {
@@ -623,7 +623,7 @@ h2.header-con-header span {
 }
 
 .banner-con.bg-03 a.more:hover {
-  transform: translateY(-3px);
+
 }
 
 .banner-con.bg-04 {
@@ -660,7 +660,7 @@ h2.header-con-header span {
 }
 
 .banner-con.bg-04 a.more:hover {
-  transform: translateY(-3px);
+
 }
 
 .banner-con .banner-font {
@@ -709,7 +709,7 @@ h2.header-con-header span {
 .banner-con a.tc:hover {
   background: #ffffff;
   box-shadow: 0 6px 6px rgba(10, 143, 221, 0.8);
-  transform: translateY(-3px);
+
 }
 
 .fader {
@@ -755,7 +755,7 @@ h2.header-con-header span {
 .tc-blue:hover {
   color: #ffffff;
   box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
-  transform: translateY(-3px);
+
 }
 
 /*banner标题文字*/
@@ -899,7 +899,7 @@ a.btn-advice:hover {
 }
 
 .technical_consultation_box .tc_list li:hover {
-  transform: translateY(-8px);
+
   box-shadow: 0 10px 30px 0px rgba(202, 203, 204, 0.5);
 }
 
@@ -971,7 +971,7 @@ a.btn-advice:hover {
 }
 
 .enhancement_function_list li:hover {
-  transform: translateY(-8px);
+
 }
 
 .enhancement_function_list li .con-box {
@@ -980,7 +980,6 @@ a.btn-advice:hover {
 }
 
 .enhancement_function_list li .icon-icon-security-bb {
-  cursor: pointer;
   width: 164px;
   height: 164px;
   line-height: 164px;
@@ -1529,12 +1528,13 @@ a.form_submit {
       font-size: 14px;
     }
 
-    .mhn-slide {
+    .phone-hidden {
       display: none !important;
     }
 
     .phone-show {
       display: block !important;
+      padding: 0 !important;
     }
   }
 
@@ -1639,7 +1639,7 @@ a.form_submit {
   }
 
   .technical_consultation_box .tc_list li.active {
-    transform: translateY(-8px);
+
     box-shadow: 0 10px 30px 0px rgba(202, 203, 204, 0.5);
     cursor: pointer
   }
@@ -1838,7 +1838,7 @@ a.form_submit {
   }
 
   .fader {
-    padding-top: 600px;
+    padding-top: 400px;
   }
 
   /*首页第一屏*/
@@ -1850,6 +1850,30 @@ a.form_submit {
   .company-information-list li {
     width: 100%;
     text-align: center
+  }
+
+  .company-information-list li.info {
+    width: 100%;
+  }
+
+  .company-information-list li.wechatout {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .company-information-list li.wechatout img {
+    margin: 0 auto;
+    padding-bottom: 6px;
+  }
+
+  .friendship-links {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .friendship-links .right {
+    right: 0;
   }
 
   .company-information-list li .con {
@@ -1984,14 +2008,43 @@ a.form_submit {
 
 @media screen  and (min-width: 320px)and (max-width: 767px) {
   #mainNav .logobox {
+    background: url("../images/aigo-logo-small.png") no-repeat;
     margin-left: 16px;
+    margin-top: 13px;
+    height: 26px;
+  }
+
+  .p-120 {
+    padding: 70px 0;
+  }
+
+  .margin-bottom-80 {
+    margin-bottom: 40px;
   }
 
   .banner {
     background-position: center -70px;
     background-size: auto;
-    height: 600px;
+    height: 400px;
     margin-top: 0;
+  }
+
+  .header-con {
+    width: 100%;
+  }
+
+  .logo-box {
+    width: 100%;
+    overflow: visible;
+  }
+
+  .logo-box li {
+    margin: 16px 0;
+  }
+
+  .logo-box li img {
+    width: 100%;
+    height: auto;
   }
 
   .aig-container {
@@ -2050,6 +2103,10 @@ a.form_submit {
 
   .technical_consultation_box .tc_list, .enhancement_function_list, .info_list {
     margin-top: 30px
+  }
+
+  .index.education .enhancement_function_list li {
+    width: 90%;
   }
 
   .technical_consultation_box .tc_list li, .enhancement_function_list li, .info_list li {
