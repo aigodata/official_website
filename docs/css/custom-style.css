@@ -104,8 +104,8 @@ h2.header-con-header span {
 }
 
 .logo-box li img {
-  width: 361px;
-  height: 270px;
+  width: 262px;
+  height: 210px;
   border-radius: 6px;
   border: none !important;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) !important;
@@ -386,7 +386,9 @@ h2.header-con-header span {
   }
 
   .w-top.scrolled .logobox {
-    background: url("../images/aigo-logo-middle.png") no-repeat;
+    background: url("../images/logo.svg") no-repeat;
+    width: 242px;
+    height: 42px;
   }
 
   .p1100 {
@@ -2029,8 +2031,8 @@ a.form_submit {
 
 @media screen  and (min-width: 320px)and (max-width: 767px) {
   #mainNav .logobox {
-    background: url("../images/aigo-logo-small.png") no-repeat;
-    margin-left: 16px;
+    background: url("../images/logo-small.svg") no-repeat;
+    margin-left: 6px;
     margin-top: 13px;
     height: 26px;
   }
