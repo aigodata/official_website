@@ -1559,13 +1559,13 @@ a.form_submit {
     position: relative;
     top: 0;
     text-align: center;
-    height: 700px;
+    height: 400px;
   }
 
   .banner-con .banner-font {
     float: none;
     left: 0;
-    top: 50px;
+    top: 80px;
     overflow: hidden;
     padding-bottom: 10px;
   }
@@ -1611,7 +1611,7 @@ a.form_submit {
   }
 
   .fader {
-    padding-top: 700px;
+    padding-top: 400px;
   }
 
   /*首页第一屏*/
@@ -1731,6 +1731,27 @@ a.form_submit {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
+  .logo-box {
+    width: 100%;
+  }
+
+  .logo-box li {
+    width: calc(50% - 38px);
+  }
+
+  .logo-box li img {
+    width: 100%;
+    height: 251px;
+  }
+
+  .banner-con .banner-font .header {
+    margin-top: 50px;
+  }
+
+  .aig-container h2 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
 
   /*banner*/
   .banner {
@@ -1812,12 +1833,12 @@ a.form_submit {
   /*banner*/
   .banner-con {
     padding: 0 20px;
-    height: 600px;
+    height: 400px;
   }
 
   .banner-con .banner-font .header {
     font-size: 30px;
-    margin-top: 70px;
+    margin-top: 12%;
   }
 
   .banner-con .banner-font .con {
@@ -2015,7 +2036,7 @@ a.form_submit {
   }
 
   .p-120 {
-    padding: 70px 0;
+    padding: 40px 0;
   }
 
   .margin-bottom-80 {
@@ -2057,6 +2078,7 @@ a.form_submit {
     margin-top: 0;
     margin-bottom: 20px;
     padding: 0 10px;
+    font-weight: bold;
   }
 
   .txt_img_small {
